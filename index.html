@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>Academia La Garra — Comoto 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ═══════════════════════════════════════════
+       HOME
+  ═══════════════════════════════════════════ -->
+  <div class="screen active" id="screen-home">
+    <div class="home-bg-glow"></div>
+    <header class="home-header">
+      <img src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/695e932a48dcc64b1791ee51.png"
+           alt="Comoto" class="logo">
+    </header>
+    <main class="home-main">
+      <div class="home-hero">
+        <div class="hero-badge">CRM La Garra · HoCo · 2026</div>
+        <h1>Academia <span class="brand">La Garra</span></h1>
+        <p class="subtitle">Tu centro de capacitación para el CRM Comoto.<br>Selecciona tu área para comenzar.</p>
+      </div>
+      <div class="area-grid">
+
+        <button class="area-card" data-area="gerentes">
+          <div class="card-glow"></div>
+          <span class="area-icon">👔</span>
+          <div class="card-body">
+            <span class="area-name">Gerentes</span>
+            <span class="area-desc">Monitoreo, reportes y redirección de leads</span>
+          </div>
+          <span class="area-cta">Ver módulo <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+        </button>
+
+        <button class="area-card" data-area="ventas">
+          <div class="card-glow"></div>
+          <span class="area-icon">🏍️</span>
+          <div class="card-body">
+            <span class="area-name">Ventas</span>
+            <span class="area-desc">Pipeline, datos de venta y etapas</span>
+          </div>
+          <span class="area-cta">Ver módulo <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+        </button>
+
+        <button class="area-card" data-area="servicio">
+          <div class="card-glow"></div>
+          <span class="area-icon">🔧</span>
+          <div class="card-body">
+            <span class="area-name">Servicio</span>
+            <span class="area-desc">Recepción de taller y seguimiento</span>
+          </div>
+          <span class="area-cta">Ver módulo <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+        </button>
+
+        <button class="area-card" data-area="refacciones">
+          <div class="card-glow"></div>
+          <span class="area-icon">⚙️</span>
+          <div class="card-body">
+            <span class="area-name">Refacciones</span>
+            <span class="area-desc">Pedidos, piezas y tracking</span>
+          </div>
+          <span class="area-cta">Ver módulo <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+        </button>
+
+      </div>
+    </main>
+    <footer class="home-footer">
+      <span>Comoto © 2026 · Todos los derechos reservados</span>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       GERENTES
+  ═══════════════════════════════════════════ -->
+  <div class="screen" id="screen-gerentes">
+    <header class="area-header area-header--gerentes">
+      <button class="back-btn" data-target="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Inicio
+      </button>
+      <div class="header-info">
+        <span class="header-icon">👔</span>
+        <div>
+          <div class="header-area">Módulo</div>
+          <h2>Gerentes</h2>
+        </div>
+      </div>
+    </header>
+    <nav class="tabs">
+      <button class="tab active" data-tab="video">🎬 Video</button>
+      <button class="tab" data-tab="guia">📋 Guía</button>
+      <button class="tab" data-tab="ref">⚡ Referencia</button>
+      <button class="tab" data-tab="quiz">❓ Quiz</button>
+    </nav>
+    <div class="tab-panels">
+
+      <div class="tab-panel active" id="gerentes-video">
+        <div class="video-card">
+          <div class="video-label">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>
+            Asignar a Sucursal
+          </div>
+          <video controls preload="none" playsinline>
+            <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e8e9e0b0e5e2bb7fd406ae.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="gerentes-guia">
+        <div class="accordion">
+          <div class="acc-item open">
+            <div class="acc-header"><span>✅ ¿Qué debo hacer?</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li>Atender o redirigir leads en <strong>menos de 24 horas</strong></li>
+                <li>Redireccionar por sucursal y área usando <strong>Mando de Control</strong></li>
+                <li>Asignar asesor de seguimiento en <strong>FOLLOWERS / SEGUIDORES</strong></li>
+                <li>Monitorear tiempos de conversaciones por vencer y avisar al asesor</li>
+                <li>Ver y monitorear todas las etapas por área desde Oportunidades</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>🔄 Mando de Control</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <p class="acc-intro">Herramienta para redirigir leads que el bot no clasificó correctamente.</p>
+              <ul class="step-list">
+                <li><strong>Sucursal a asignar:</strong> Selecciona la sucursal que el cliente requiere</li>
+                <li><strong>Redirigir al equipo:</strong> Define qué departamento atiende el caso (Ventas, Servicio, Refacciones)</li>
+                <li><strong>Chatbot:</strong> Indica si el asistente virtual sigue respondiendo cuando estés inactivo</li>
+                <li><strong>Nota:</strong> Las redirecciones seguirán en tu bandeja, solo sirve para destinar al asesor de seguimiento</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>📊 Oportunidades</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li>Solo gerencia puede <strong>ver todas las áreas</strong> simultáneamente</li>
+                <li>Selecciona el área para visualizar sus etapas (Ventas, Servicio, Refacciones)</li>
+                <li>Revisa el resumen de <strong>pronósticos de ventas</strong></li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>📈 Informes y Reportes</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li>Reportes de <strong>Redes Sociales</strong> según campañas por sucursal</li>
+                <li>Reportes e informes de <strong>citas</strong> del área</li>
+                <li>Estadísticas en tiempo real del CRM</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>🛠️ Herramientas Extras</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li><strong>Tareas:</strong> Actividades pendientes asignadas por ti o por el asesor</li>
+                <li><strong>Notas:</strong> Registro de detalles importantes del cliente</li>
+                <li><strong>Calendario:</strong> Agenda de citas, privada por asesor y gerencia</li>
+                <li><strong>Documentos:</strong> Carpeta Interna, Enviados y Recibidos (encuestas)</li>
+                <li><strong>Estudio IA:</strong> Consulta y crea con IA con información personalizada del grupo</li>
+                <li><strong>Almacenamiento de Medios:</strong> Publicidad y gráficos de motocicletas actuales</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="gerentes-ref">
+        <div class="ref-card">
+          <h3 class="ref-title">⚡ Cheat Sheet — Gerentes</h3>
+          <div class="ref-item"><span class="ref-icon">⏱️</span><div><strong>Tiempo máximo de respuesta:</strong> menos de 24 horas para atender o redirigir un lead</div></div>
+          <div class="ref-item"><span class="ref-icon">🔄</span><div>Usar <strong>Mando de Control</strong> cuando el bot mande un lead al área o sucursal incorrecta</div></div>
+          <div class="ref-item"><span class="ref-icon">👥</span><div>Asignar asesor de seguimiento en <strong>FOLLOWERS / SEGUIDORES</strong></div></div>
+          <div class="ref-item"><span class="ref-icon">📊</span><div>Monitorear <strong>Oportunidades</strong> — ver todas las etapas por área en tiempo real</div></div>
+          <div class="ref-item"><span class="ref-icon">⚠️</span><div>Vigilar tiempos de conversaciones y dar aviso al asesor antes de que venzan</div></div>
+          <div class="ref-item"><span class="ref-icon">📈</span><div>Revisar <strong>Informes</strong>: Redes Sociales + citas por sucursal</div></div>
+          <div class="ref-item"><span class="ref-icon">🤖</span><div>Controlar el <strong>Chatbot</strong> (activo/inactivo) desde Mando de Control</div></div>
+        </div>
+        <div class="warning-box">💡 <strong>Recuerda:</strong> Las redirecciones seguirán en tu bandeja, pero solo sirven para destinar un asesor de seguimiento. No dejes leads sin atender.</div>
+      </div>
+
+      <div class="tab-panel" id="gerentes-quiz">
+        <div class="quiz-container"><div class="quiz-q-body"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       VENTAS
+  ═══════════════════════════════════════════ -->
+  <div class="screen" id="screen-ventas">
+    <header class="area-header area-header--ventas">
+      <button class="back-btn" data-target="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Inicio
+      </button>
+      <div class="header-info">
+        <span class="header-icon">🏍️</span>
+        <div>
+          <div class="header-area">Módulo</div>
+          <h2>Ventas</h2>
+        </div>
+      </div>
+    </header>
+    <nav class="tabs">
+      <button class="tab active" data-tab="video">🎬 Videos</button>
+      <button class="tab" data-tab="guia">📋 Guía</button>
+      <button class="tab" data-tab="ref">⚡ Referencia</button>
+      <button class="tab" data-tab="quiz">❓ Quiz</button>
+    </nav>
+    <div class="tab-panels">
+
+      <div class="tab-panel active" id="ventas-video">
+        <div class="video-card">
+          <div class="video-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>Datos de Llenado — Venta Individual</div>
+          <video controls preload="none" playsinline>
+            <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e7d93d5e482c379bbe8cc8.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-card">
+          <div class="video-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>Datos de Llenado — Venta Empresarial</div>
+          <video controls preload="none" playsinline>
+            <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e7d500c02618972e47cd5f.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="ventas-guia">
+        <div class="accordion">
+          <div class="acc-item open">
+            <div class="acc-header"><span>✅ ¿Qué debo hacer?</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li>Dar seguimiento en <strong>menos de 24 horas</strong> al cliente interesado</li>
+                <li>Actualizar información según tipo de cliente (Física o Empresa)</li>
+                <li>Agendar cita desde el <strong>Calendario</strong> del CRM</li>
+                <li>Verificar y corregir la información del cliente</li>
+                <li>Actualizar las <strong>etapas</strong> según el estatus actual del cliente</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>⚠️ Plantillas <span class="badge badge-orange">$ Tienen Costo</span></span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <div class="warning-box" style="margin-bottom:14px;">⚠️ <strong>¡Las plantillas tienen COSTO! Úsalas con responsabilidad.</strong></div>
+              <p class="acc-intro"><strong>¿Cuándo usar plantillas de activación?</strong></p>
+              <ul class="step-list">
+                <li>✅ Cuando contactes al cliente <strong>por primera vez</strong></li>
+                <li>✅ Para dar seguimiento si el cliente no estaba en el CRM</li>
+                <li>✅ Si pasaron <strong>+24 horas sin respuesta</strong> y el cliente muestra claro fin comercial</li>
+                <li>❌ Se puede EVITAR si contestas dentro de las primeras 24 hrs</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>👤 Datos de Venta — Persona Física</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li><strong>1. Fecha oficial de compra:</strong> <span class="text-red">NO llenar manualmente.</span> Se activa al presionar "Venta realizada"</li>
+                <li><strong>2. Selecciona la moto:</strong> Elige el modelo del catálogo</li>
+                <li><strong>3. Modelo de interés:</strong> Solo si el modelo no aparece en catálogo</li>
+                <li><strong>4. Método de pago:</strong> Contado, Crédito, etc.</li>
+                <li><strong>5. Pago a meses:</strong> Indica el plazo elegido por el cliente</li>
+                <li><strong>6. Promoción adquirida:</strong> Registra si aplicaste alguna promoción</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>🏢 Datos de Venta — Empresa</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li><strong>1. Nombre del negocio:</strong> Razón social o nombre comercial</li>
+                <li><strong>2. Dirección postal:</strong> Domicilio fiscal o de entrega acordado</li>
+                <li><strong>3. Fecha oficial de compra:</strong> Automática al confirmar la venta</li>
+                <li><strong>4. Moto elegida:</strong> Modelo principal que adquirió la empresa</li>
+                <li><strong>5. Cantidad de motocicletas:</strong> <span class="text-red">¡Vital para el inventario!</span></li>
+                <li><strong>6. Promoción adquirida:</strong> Precio especial por volumen o convenio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>📊 Etapas de la Venta</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <div class="stages">
+                <div class="stage-item"><div class="stage-num">1</div><div class="stage-info"><h4>Nuevo Prospecto</h4><p>El prospecto acaba de ingresar al sistema</p></div></div>
+                <div class="stage-item"><div class="stage-num">2</div><div class="stage-info"><h4>Envío de Información</h4><p>Información general para generar interés</p></div></div>
+                <div class="stage-item"><div class="stage-num">3</div><div class="stage-info"><h4>Identificación de Interés</h4><p>Se identifica la moto de interés y el método de pago</p></div></div>
+                <div class="stage-item"><div class="stage-num">4</div><div class="stage-info"><h4>Muestra Interés Real</h4><p>Objetivo: programar una cita</p></div></div>
+                <div class="stage-item"><div class="stage-num">5</div><div class="stage-info"><h4>En Espera de Aprobación</h4><p>Espera de aprobación del financiamiento</p></div></div>
+                <div class="stage-item"><div class="stage-num">6</div><div class="stage-info"><h4>Trámites y Papeleo</h4><p>Trámites de pago y papeleo legal</p></div></div>
+                <div class="stage-item"><div class="stage-num">7</div><div class="stage-info"><h4>Preparación Física</h4><p>Preparación física de la motocicleta</p></div></div>
+                <div class="stage-item"><div class="stage-num">8</div><div class="stage-info"><h4>Entrega Realizada</h4><p>Compra completada. Enviar encuesta de satisfacción</p></div></div>
+                <div class="stage-item"><div class="stage-num">9</div><div class="stage-info"><h4>Seguimiento Largo Plazo</h4><p>La decisión se pausó; requiere seguimiento a largo plazo</p></div></div>
+                <div class="stage-item stage-lost"><div class="stage-num stage-num-lost">✕</div><div class="stage-info"><h4>Perdido</h4><p>El cliente descartó la compra definitivamente</p></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>📅 Calendario y Contactos</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li><strong>Calendario:</strong> Agenda y gestiona citas desde la barra lateral o conversación</li>
+                <li><strong>Contactos:</strong> Crea listas inteligentes por modelo de interés o tipo de cliente</li>
+                <li><strong>Tareas:</strong> Agrega y destina actividades pendientes</li>
+                <li><strong>Nota:</strong> Si no puedes agregar un contacto, ya existe — búscalo primero</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="ventas-ref">
+        <div class="ref-card">
+          <h3 class="ref-title">⚡ Cheat Sheet — Ventas</h3>
+          <div class="ref-item"><span class="ref-icon">⏱️</span><div>Contactar cliente en <strong>menos de 24 horas</strong></div></div>
+          <div class="ref-item"><span class="ref-icon">💰</span><div>Plantillas = <strong>COSTO</strong> — usar solo cuando sea necesario</div></div>
+          <div class="ref-item"><span class="ref-icon">🚫</span><div>Fecha de compra = <strong>automática</strong> — NO editar manualmente</div></div>
+          <div class="ref-item"><span class="ref-icon">👤</span><div>Llenar datos según tipo: <strong>Persona Física</strong> o <strong>Empresa</strong></div></div>
+          <div class="ref-item"><span class="ref-icon">📊</span><div>Actualizar etapa según el estatus actual del cliente</div></div>
+          <div class="ref-item"><span class="ref-icon">🏢</span><div>En empresas: registrar <strong>cantidad de motos</strong> — vital para inventario</div></div>
+          <div class="ref-item"><span class="ref-icon">🔍</span><div>Antes de crear contacto: <strong>buscar primero</strong> por si ya existe</div></div>
+        </div>
+        <div class="warning-box">⚠️ <strong>Plantillas:</strong> Úsalas solo al primer contacto o después de +24 hrs sin respuesta con fin comercial claro. Tienen costo por envío.</div>
+      </div>
+
+      <div class="tab-panel" id="ventas-quiz">
+        <div class="quiz-container"><div class="quiz-q-body"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICIO
+  ═══════════════════════════════════════════ -->
+  <div class="screen" id="screen-servicio">
+    <header class="area-header area-header--servicio">
+      <button class="back-btn" data-target="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Inicio
+      </button>
+      <div class="header-info">
+        <span class="header-icon">🔧</span>
+        <div>
+          <div class="header-area">Módulo</div>
+          <h2>Servicio</h2>
+        </div>
+      </div>
+    </header>
+    <nav class="tabs">
+      <button class="tab active" data-tab="video">🎬 Video</button>
+      <button class="tab" data-tab="guia">📋 Guía</button>
+      <button class="tab" data-tab="ref">⚡ Referencia</button>
+      <button class="tab" data-tab="quiz">❓ Quiz</button>
+    </nav>
+    <div class="tab-panels">
+
+      <div class="tab-panel active" id="servicio-video">
+        <div class="video-card">
+          <div class="video-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>Cómo Llenar los Datos en el Área de Servicio</div>
+          <video controls preload="none" playsinline>
+            <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e8ed21b0e5e2bb7fd4fe5b.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="servicio-guia">
+        <div class="accordion">
+          <div class="acc-item open">
+            <div class="acc-header"><span>✅ ¿Qué debo hacer?</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li>Dar seguimiento en <strong>menos de 24 horas</strong> al cliente interesado</li>
+                <li>Actualizar la información de seguimiento del <strong>área de Servicio</strong></li>
+                <li><strong>Agendar cita</strong> desde el Calendario del CRM</li>
+                <li>Verificar y corregir la información del cliente</li>
+                <li>Actualizar las <strong>etapas</strong> del servicio en tiempo real</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>📋 Datos a Registrar</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li><strong>1. Modelo:</strong> Confirma el modelo exacto de la moto que ingresa a taller</li>
+                <li><strong>2. Año modelo:</strong> Registra el año de la unidad para control de refacciones</li>
+                <li><strong>3. Kilometraje actual:</strong> Anota el kilometraje exacto al momento de la recepción</li>
+                <li><strong>4. No. placa / NIV o VIN:</strong> <span class="text-red">OBLIGATORIO para el expediente legal</span></li>
+                <li><strong>5. Historial de servicios:</strong> Breve resumen de servicios previos</li>
+                <li><strong>6. Notas:</strong> Observaciones del cliente o detalles del técnico</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>📊 Etapas del Servicio</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <div class="stages">
+                <div class="stage-item"><div class="stage-num">1</div><div class="stage-info"><h4>Nuevo Ingreso</h4><p>El prospecto acaba de ingresar al sistema</p></div></div>
+                <div class="stage-item"><div class="stage-num">2</div><div class="stage-info"><h4>Espacio Reservado</h4><p>El cliente tiene una cita agendada</p></div></div>
+                <div class="stage-item"><div class="stage-num">3</div><div class="stage-info"><h4>Moto en Taller</h4><p>La motocicleta ingresa físicamente a taller</p></div></div>
+                <div class="stage-item"><div class="stage-num">4</div><div class="stage-info"><h4>Cotización Enviada</h4><p>Se envió la cotización, esperando autorización del cliente</p></div></div>
+                <div class="stage-item"><div class="stage-num">5</div><div class="stage-info"><h4>Pausa por Falta de Piezas</h4><p>Avisar manualmente al cliente el tiempo estimado de espera</p></div></div>
+                <div class="stage-item"><div class="stage-num">6</div><div class="stage-info"><h4>Mantenimiento Terminado</h4><p>Listo; la moto está físicamente en sucursal</p></div></div>
+                <div class="stage-item"><div class="stage-num">7</div><div class="stage-info"><h4>Cliente Pagó y Recogió</h4><p>El cliente paga y se lleva la motocicleta</p></div></div>
+                <div class="stage-item"><div class="stage-num">8</div><div class="stage-info"><h4>Seguimiento de Calidad</h4><p>Post-servicio. Se envía encuesta de satisfacción</p></div></div>
+                <div class="stage-item stage-lost"><div class="stage-num stage-num-lost">✕</div><div class="stage-info"><h4>Cliente Frío</h4><p>No se concretó el mantenimiento</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="servicio-ref">
+        <div class="ref-card">
+          <h3 class="ref-title">⚡ Cheat Sheet — Servicio</h3>
+          <div class="ref-item"><span class="ref-icon">🔑</span><div><strong>NIV/VIN + Placa son OBLIGATORIOS</strong> para el expediente legal</div></div>
+          <div class="ref-item"><span class="ref-icon">📊</span><div>Actualizar etapas del servicio <strong>en tiempo real</strong></div></div>
+          <div class="ref-item"><span class="ref-icon">⚠️</span><div>Al pausar por piezas: avisar manualmente al cliente con tiempo estimado</div></div>
+          <div class="ref-item"><span class="ref-icon">📋</span><div>Encuesta de satisfacción <strong>después de la entrega</strong></div></div>
+          <div class="ref-item"><span class="ref-icon">📅</span><div>Agendar cita desde el <strong>Calendario</strong> del CRM</div></div>
+          <div class="ref-item"><span class="ref-icon">📝</span><div>Registrar notas del técnico y observaciones del cliente</div></div>
+          <div class="ref-item"><span class="ref-icon">⏱️</span><div>Dar seguimiento en <strong>menos de 24 horas</strong></div></div>
+        </div>
+        <div class="warning-box">🔑 <strong>Importante:</strong> El No. de placa y el NIV/VIN son <strong>obligatorios</strong> para el expediente legal. No omitas estos campos.</div>
+      </div>
+
+      <div class="tab-panel" id="servicio-quiz">
+        <div class="quiz-container"><div class="quiz-q-body"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       REFACCIONES
+  ═══════════════════════════════════════════ -->
+  <div class="screen" id="screen-refacciones">
+    <header class="area-header area-header--refacciones">
+      <button class="back-btn" data-target="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Inicio
+      </button>
+      <div class="header-info">
+        <span class="header-icon">⚙️</span>
+        <div>
+          <div class="header-area">Módulo</div>
+          <h2>Refacciones</h2>
+        </div>
+      </div>
+    </header>
+    <nav class="tabs">
+      <button class="tab active" data-tab="video">🎬 Video</button>
+      <button class="tab" data-tab="guia">📋 Guía</button>
+      <button class="tab" data-tab="ref">⚡ Referencia</button>
+      <button class="tab" data-tab="quiz">❓ Quiz</button>
+    </nav>
+    <div class="tab-panels">
+
+      <div class="tab-panel active" id="refacciones-video">
+        <div class="video-card">
+          <div class="video-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>Venta de Refacción — Cómo Llenar los Datos</div>
+          <video controls preload="none" playsinline>
+            <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e8eba3a48992f6899f1937.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="refacciones-guia">
+        <div class="accordion">
+          <div class="acc-item open">
+            <div class="acc-header"><span>✅ ¿Qué debo hacer?</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li>Dar seguimiento en <strong>menos de 24 horas</strong> al cliente interesado</li>
+                <li>Actualizar la información de seguimiento de <strong>Refacciones</strong></li>
+                <li>Actualizar las <strong>etapas</strong> según el estatus del pedido</li>
+                <li>Verificar y corregir la información del cliente</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>📋 Datos a Registrar</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <ul class="step-list">
+                <li><strong>1. VIN o NIM:</strong> Para asegurar la <strong>compatibilidad de la pieza</strong></li>
+                <li><strong>2. Modelo / Año modelo:</strong> Para qué tipo de moto es la refacción</li>
+                <li><strong>3. Historial de productos:</strong> Piezas compradas anteriormente por el cliente</li>
+                <li><strong>4. Método de pago:</strong> Efectivo, Tarjeta o Transferencia</li>
+                <li><strong>5. Nombre de pieza o código:</strong> Nombre de la refacción o código Honda</li>
+                <li><strong>6. Adjuntar foto:</strong> Si la pieza tiene algún detalle visual</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-header"><span>📊 Etapas de Refacciones</span><span class="acc-arrow">▼</span></div>
+            <div class="acc-body">
+              <div class="stages">
+                <div class="stage-item"><div class="stage-num">1</div><div class="stage-info"><h4>Nuevo Ingreso</h4><p>El prospecto acaba de ingresar al sistema</p></div></div>
+                <div class="stage-item"><div class="stage-num">2</div><div class="stage-info"><h4>Cotización Enviada</h4><p>Se espera aceptación y pago de anticipo</p></div></div>
+                <div class="stage-item"><div class="stage-num">3</div><div class="stage-info"><h4>Anticipo Recibido / Pedido a HDM</h4><p>El cliente dio anticipo y ya se realizó el pedido</p></div></div>
+                <div class="stage-item stage-highlight"><div class="stage-num">4</div><div class="stage-info"><h4>🔔 Refacción en Sucursal</h4><p><strong>Aviso AUTOMÁTICO al cliente</strong> al mover a esta etapa</p></div></div>
+                <div class="stage-item"><div class="stage-num">5</div><div class="stage-info"><h4>Cliente Pagó y Recogió</h4><p>El cliente paga y lleva la refacción</p></div></div>
+                <div class="stage-item"><div class="stage-num">6</div><div class="stage-info"><h4>Seguimiento de Calidad</h4><p>Se envía encuesta Comoto al cliente</p></div></div>
+                <div class="stage-item stage-lost"><div class="stage-num stage-num-lost">✕</div><div class="stage-info"><h4>Cliente Frío</h4><p>No se concretó la venta</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="refacciones-ref">
+        <div class="ref-card">
+          <h3 class="ref-title">⚡ Cheat Sheet — Refacciones</h3>
+          <div class="ref-item"><span class="ref-icon">🔑</span><div>VIN/NIM = verificar <strong>compatibilidad de la pieza</strong></div></div>
+          <div class="ref-item"><span class="ref-icon">💰</span><div>Registrar <strong>método de pago</strong>: Efectivo / Tarjeta / Transferencia</div></div>
+          <div class="ref-item"><span class="ref-icon">📷</span><div>Adjuntar foto si la pieza tiene detalles visuales</div></div>
+          <div class="ref-item"><span class="ref-icon">🔔</span><div>Aviso de llegada a sucursal = <strong>AUTOMÁTICO</strong> — mover etapa al recibirla</div></div>
+          <div class="ref-item"><span class="ref-icon">📊</span><div>Actualizar etapas en <strong>tiempo real</strong></div></div>
+          <div class="ref-item"><span class="ref-icon">⏱️</span><div>Dar seguimiento en <strong>menos de 24 horas</strong></div></div>
+        </div>
+        <div class="warning-box">🔔 <strong>Aviso automático:</strong> Al mover a "Refacción en Sucursal" el sistema dispara un mensaje. Hazlo en el momento <strong>exacto</strong> que llegue la pieza.</div>
+      </div>
+
+      <div class="tab-panel" id="refacciones-quiz">
+        <div class="quiz-container"><div class="quiz-q-body"></div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
