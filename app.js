@@ -338,6 +338,50 @@ function renderResults(area) {
 // ═══════════════════════════════════════════
 
 const EJERCICIOS = {
+  botones: {
+    titulo: 'Botones de Conversación',
+    imagen: 'img/crm-botones.png',
+    preguntas: [
+      {
+        q: '¿Dónde eliges si tu respuesta va por <strong>WhatsApp</strong> al cliente o es un <strong>Comentario Interno</strong> solo para el equipo?',
+        zona: 'canal_selector',
+        exp: 'Los tabs "WhatsApp / Internal Comment" definen el destino del mensaje. WhatsApp llega al cliente; Internal Comment solo lo ven los asesores y gerencia.'
+      },
+      {
+        q: '¿Dónde <strong>escribes el mensaje</strong> antes de enviarlo al cliente?',
+        zona: 'input_mensaje',
+        exp: 'El campo "Type a message..." es donde redactas tu respuesta. Desde aquí también puedes programar el envío para después.'
+      },
+      {
+        q: '¿Dónde están los íconos para adjuntar archivos, emojis, notas de voz, fragmentos y plantillas?',
+        zona: 'toolbar_iconos',
+        exp: 'La barra inferior tiene todos los atajos: 😊 emojis · 📎 adjuntos · 🎙️ notas de voz · ⚡ fragmentos · plantillas WA y más.'
+      },
+      {
+        q: 'En el Mando de Control, ¿dónde defines a qué <strong>Sucursal</strong> se asigna el lead?',
+        zona: 'sucursal_campo',
+        exp: '"Sucursal a asignar" es el primer campo del Mando de Control — aquí seleccionas la sucursal que atenderá al cliente (ej. Guadalajara).'
+      },
+      {
+        q: 'En el Mando de Control, ¿dónde seleccionas a qué <strong>equipo</strong> se redirige el lead (Ventas, Servicio, Refacciones)?',
+        zona: 'redirigir_campo',
+        exp: '"Redirigir al equipo" define qué área recibirá el lead. Asegúrate de combinarlo con la sucursal correcta antes de guardar.'
+      },
+      {
+        q: 'En el Mando de Control, ¿dónde activas o desactivas el <strong>Chatbot</strong> para que responda cuando no estás disponible?',
+        zona: 'chatbot_campo',
+        exp: 'El campo "Chatbot" controla si el asistente virtual sigue activo en esa conversación. Desactívalo cuando vayas a tomar el control manualmente.'
+      }
+    ],
+    zonas: {
+      canal_selector: { x: 32, y: 75, w: 22, h:  5 },
+      input_mensaje:  { x: 32, y: 80, w: 47, h: 12 },
+      toolbar_iconos: { x: 32, y: 92, w: 47, h:  6 },
+      sucursal_campo: { x: 79, y: 37, w: 21, h:  7 },
+      redirigir_campo:{ x: 79, y: 44, w: 21, h:  7 },
+      chatbot_campo:  { x: 79, y: 51, w: 21, h:  6 }
+    }
+  },
   conv: {
     titulo: 'Panel de Conversaciones',
     imagen: 'img/crm-conversaciones.png',
