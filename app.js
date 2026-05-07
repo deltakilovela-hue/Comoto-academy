@@ -374,12 +374,12 @@ const EJERCICIOS = {
       }
     ],
     zonas: {
-      canal_selector: { x: 32, y: 75, w: 22, h:  5 },
-      input_mensaje:  { x: 32, y: 80, w: 47, h: 12 },
-      toolbar_iconos: { x: 32, y: 92, w: 47, h:  6 },
-      sucursal_campo: { x: 79, y: 37, w: 21, h:  7 },
-      redirigir_campo:{ x: 79, y: 44, w: 21, h:  7 },
-      chatbot_campo:  { x: 79, y: 51, w: 21, h:  6 }
+      canal_selector: { x: 32, y: 67, w: 22, h:  5 },
+      input_mensaje:  { x: 32, y: 72, w: 47, h: 16 },
+      toolbar_iconos: { x: 32, y: 88, w: 47, h:  8 },
+      sucursal_campo: { x: 79, y: 39, w: 21, h:  8 },
+      redirigir_campo:{ x: 79, y: 47, w: 21, h:  7 },
+      chatbot_campo:  { x: 79, y: 54, w: 21, h:  7 }
     }
   },
   conv: {
@@ -418,12 +418,12 @@ const EJERCICIOS = {
       }
     ],
     zonas: {
-      menu_conv:    { x:  7, y: 21, w:  8, h:  6 },
-      bandeja:      { x: 13, y:  8, w: 19, h: 88 },
-      filtros:      { x: 13, y: 15, w: 19, h:  7 },
-      chat:         { x: 32, y:  8, w: 47, h: 82 },
-      mando_control:{ x: 79, y: 31, w: 21, h:  7 },
-      datos_venta:  { x: 79, y: 38, w: 21, h: 14 }
+      menu_conv:    { x:  7, y: 19, w:  9, h:  7 },
+      bandeja:      { x: 11, y:  7, w: 20, h: 88 },
+      filtros:      { x: 11, y: 13, w: 20, h:  8 },
+      chat:         { x: 31, y:  7, w: 48, h: 83 },
+      mando_control:{ x: 79, y: 34, w: 21, h:  7 },
+      datos_venta:  { x: 79, y: 41, w: 21, h: 14 }
     }
   }
 };
