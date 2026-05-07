@@ -470,10 +470,12 @@ function renderEjPregunta(id) {
         <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
         Toca la zona correcta en la imagen
       </div>
-      <div class="ej-img-container">
+      <div class="ej-img-container" id="ej-wrap-${id}" onclick="ejCoords(event,'${id}')">
         <img src="${ej.imagen}" class="ej-img" alt="Panel CRM Comoto" draggable="false">
         ${zonasHTML}
+        <div class="ej-crosshair" id="ej-cross-${id}"></div>
       </div>
+      <div class="ej-coords-badge" id="ej-coords-${id}">📍 Toca la imagen para ver las coordenadas</div>
       <div class="ej-feedback" id="ej-fb-${id}"></div>
       <button class="quiz-next-btn" id="ej-nxt-${id}"
               onclick="nextEjPregunta('${id}')">
@@ -483,6 +485,17 @@ function renderEjPregunta(id) {
   `;
 
   s.answered = false;
+}
+
+function ejCoords(e, id) {
+  const wrap = document.getElementById('ej-wrap-' + id);
+  const rect  = wrap.getBoundingClientRect();
+  const x = ((e.clientX - rect.left) / rect.width  * 100).toFixed(1);
+  const y = ((e.clientY - rect.top)  / rect.height * 100).toFixed(1);
+  const badge = document.getElementById('ej-coords-' + id);
+  if (badge) badge.textContent = '📍 x: ' + x + '%  y: ' + y + '%';
+  const cross = document.getElementById('ej-cross-' + id);
+  if (cross) { cross.style.left = x + '%'; cross.style.top = y + '%'; cross.style.display = 'block'; }
 }
 
 function checkZona(id, zona) {

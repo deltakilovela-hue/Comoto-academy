@@ -750,11 +750,36 @@ img    { max-width: 100%; }
   position: absolute;
   border-radius: 4px;
   cursor: pointer;
+  border: 1.5px dashed rgba(255,255,255,0.25);
   transition: background 0.15s, box-shadow 0.15s;
   -webkit-tap-highlight-color: rgba(245,166,35,0.15);
 }
-.ej-zone:hover { background: rgba(245,166,35,0.1); }
-.ej-zone:active { background: rgba(245,166,35,0.2); }
+.ej-zone:hover { background: rgba(245,166,35,0.15); border-color: rgba(245,166,35,0.6); }
+.ej-zone:active { background: rgba(245,166,35,0.25); }
+
+/* calibration tools */
+.ej-crosshair {
+  display: none;
+  position: absolute;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(229,9,20,0.9);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: 0 0 0 3px rgba(229,9,20,0.3), 0 0 10px rgba(229,9,20,0.6);
+  z-index: 20;
+}
+.ej-coords-badge {
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--warning);
+  background: rgba(245,166,35,0.08);
+  border: 1px dashed rgba(245,166,35,0.3);
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 8px 0;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
 
 .ej-zone.correct {
   background: rgba(70,211,105,0.18);
