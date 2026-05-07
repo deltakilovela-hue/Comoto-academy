@@ -374,12 +374,12 @@ const EJERCICIOS = {
       }
     ],
     zonas: {
-      menu_conv:    { x:  7, y: 18, w:  8, h:  5 },
-      bandeja:      { x: 14, y:  7, w: 19, h: 90 },
-      filtros:      { x: 14, y: 14, w: 19, h:  7 },
-      chat:         { x: 33, y:  7, w: 46, h: 83 },
-      mando_control:{ x: 79, y: 34, w: 21, h:  6 },
-      datos_venta:  { x: 79, y: 40, w: 21, h: 12 }
+      menu_conv:    { x:  7, y: 21, w:  8, h:  6 },
+      bandeja:      { x: 13, y:  8, w: 19, h: 88 },
+      filtros:      { x: 13, y: 15, w: 19, h:  7 },
+      chat:         { x: 32, y:  8, w: 47, h: 82 },
+      mando_control:{ x: 79, y: 31, w: 21, h:  7 },
+      datos_venta:  { x: 79, y: 38, w: 21, h: 14 }
     }
   }
 };
