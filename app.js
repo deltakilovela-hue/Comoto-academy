@@ -387,43 +387,31 @@ const EJERCICIOS = {
     imagen: 'img/crm-conversaciones.png',
     preguntas: [
       {
-        q: '¿En qué ícono del menú lateral izquierdo haces clic para acceder a tus Conversaciones?',
-        zona: 'menu_conv',
-        exp: 'El ícono "Conversations" en el menú lateral izquierdo es tu punto de entrada a todos los chats activos con clientes.'
+        q: '¿Dónde encuentras el formulario para registrar la <strong>venta de una moto</strong> (modelo, precio, RFC)?',
+        zona: 'datos_venta_ind',
+        exp: '"Datos de Venta Individual" está en el panel derecho (Contact Details). Aquí registras el modelo, cantidad facturada, RFC y método de pago para cerrar la venta.'
       },
       {
-        q: '¿Dónde está tu Bandeja de Entrada (My Inbox) con la lista de todos tus chats?',
-        zona: 'bandeja',
-        exp: '"My Inbox" es el panel central izquierdo. Aquí ves todas tus conversaciones ordenadas por fecha con nombre del cliente, canal y último mensaje.'
+        q: '¿Dónde registras los datos cuando vendes una <strong>refacción</strong> (pieza, VIN, precio)?',
+        zona: 'refacciones',
+        exp: '"Refacciones" en el panel derecho es donde ingresas el nombre de la pieza o código Honda, VIN, precio y cierras la transacción con "REFACCIÓN VENDIDA".'
       },
       {
-        q: '¿Dónde filtras tus mensajes por Sin Leer, Todos, Recientes o Destacados?',
-        zona: 'filtros',
-        exp: 'Los filtros Unread / All / Recents / Starred están en la franja superior de la bandeja de entrada — úsalos para encontrar leads pendientes más rápido.'
+        q: '¿Dónde completas los datos cuando un cliente lleva su moto a <strong>servicio o taller</strong>?',
+        zona: 'servicio',
+        exp: '"Servicio" en el panel derecho es donde registras placa/VIN, fecha de recepción, link de encuesta y cierras con "Servicio Realizado".'
       },
       {
-        q: '¿Dónde ves el historial de mensajes y puedes responderle directamente al cliente?',
-        zona: 'chat',
-        exp: 'El panel central muestra el historial completo de la conversación con el cliente, el canal de contacto y el campo para escribir y enviar tu respuesta.'
-      },
-      {
-        q: '¿Dónde encuentras el Mando de Control para redirigir a un lead por área o sucursal?',
+        q: '¿Dónde redirigís el lead a <strong>otra área o sucursal</strong> y controlas el chatbot?',
         zona: 'mando_control',
-        exp: 'El Mando de Control está en el panel derecho (Contact Details). Desde ahí redirigís por área o sucursal y controlas si el chatbot está activo.'
-      },
-      {
-        q: '¿Dónde registras los Datos de Venta del cliente (modelo, precio y tipo de comprador)?',
-        zona: 'datos_venta',
-        exp: 'Los Datos de Venta Individual y Empresa están en el panel derecho, debajo del Mando de Control. Aquí registras precio, RFC, método de pago y cierras la venta.'
+        exp: '"Mando de Control" está en la parte superior del panel derecho. Desde ahí asignas sucursal, eliges el área (Ventas, Servicio, Refacciones) y activas o desactivas el chatbot.'
       }
     ],
     zonas: {
-      menu_conv:    { x:  7, y: 19, w:  9, h:  7 },
-      bandeja:      { x: 11, y:  7, w: 20, h: 88 },
-      filtros:      { x: 11, y: 13, w: 20, h:  8 },
-      chat:         { x: 31, y:  7, w: 48, h: 83 },
-      mando_control:{ x: 79, y: 34, w: 21, h:  7 },
-      datos_venta:  { x: 79, y: 41, w: 21, h: 14 }
+      datos_venta_ind: { x: 79, y: 50, w: 21, h:  5 },
+      refacciones:     { x: 79, y: 66, w: 21, h:  4 },
+      servicio:        { x: 79, y: 61, w: 21, h:  4 },
+      mando_control:   { x: 79, y: 39, w: 21, h: 10 }
     }
   }
 };
