@@ -71,6 +71,14 @@
         </div>
         <svg class="manual-home-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
       </button>
+      <button class="manual-home-btn ejercicios-home-btn" onclick="showScreen('ejercicios')">
+        <span class="manual-home-icon">🎯</span>
+        <div class="manual-home-text">
+          <span class="manual-home-title">Ejercicios Prácticos</span>
+          <span class="manual-home-sub">Identifica secciones del CRM haciendo clic en pantalla</span>
+        </div>
+        <svg class="manual-home-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
     </main>
     <footer class="home-footer"><span>Comoto © 2026 · Todos los derechos reservados</span></footer>
   </div>
@@ -929,6 +937,49 @@
       <div class="tab-panel" id="refacciones-quiz">
         <div class="quiz-container"><div class="quiz-q-body"></div></div>
       </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ EJERCICIOS LIST ═══════════════════ -->
+  <div class="screen" id="screen-ejercicios">
+    <header class="area-header area-header--ejercicios">
+      <button class="back-btn" data-target="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>Inicio
+      </button>
+      <div class="header-info">
+        <span class="header-icon">🎯</span>
+        <div><div class="header-area">Práctica</div><h2>Ejercicios</h2></div>
+      </div>
+    </header>
+    <div class="tab-panels">
+      <div style="padding:16px 16px 40px">
+        <p class="ej-list-intro">Haz clic en la imagen donde se encuentre cada sección que te preguntamos. Practica identificando el CRM hasta que lo domines.</p>
+        <button class="ej-list-card" onclick="startEjercicio('conv')">
+          <div class="ej-list-icon">💬</div>
+          <div class="ej-list-body">
+            <div class="ej-list-title">Panel de Conversaciones</div>
+            <div class="ej-list-desc">Identifica cada sección de la vista principal del CRM</div>
+            <div class="ej-list-meta">6 preguntas · Nivel básico</div>
+          </div>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;color:var(--text-dim)"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ EJERCICIO ACTIVO ═══════════════════ -->
+  <div class="screen" id="screen-ej">
+    <header class="area-header area-header--ejercicios">
+      <button class="back-btn" data-target="ejercicios">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>Ejercicios
+      </button>
+      <div class="header-info" id="ej-header-info">
+        <span class="header-icon">🎯</span>
+        <div><div class="header-area">Ejercicio</div><h2 id="ej-header-title">Práctica</h2></div>
+      </div>
+    </header>
+    <div class="tab-panels" id="ej-active-body">
+      <!-- Rendered by JS -->
     </div>
   </div>
 

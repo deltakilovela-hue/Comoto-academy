@@ -334,6 +334,185 @@ function renderResults(area) {
 
 
 // ═══════════════════════════════════════════
+// EJERCICIOS PRÁCTICOS (HOTSPOT)
+// ═══════════════════════════════════════════
+
+const EJERCICIOS = {
+  conv: {
+    titulo: 'Panel de Conversaciones',
+    imagen: 'img/crm-conversaciones.png',
+    preguntas: [
+      {
+        q: '¿En qué ícono del menú lateral izquierdo haces clic para acceder a tus Conversaciones?',
+        zona: 'menu_conv',
+        exp: 'El ícono "Conversations" en el menú lateral izquierdo es tu punto de entrada a todos los chats activos con clientes.'
+      },
+      {
+        q: '¿Dónde está tu Bandeja de Entrada (My Inbox) con la lista de todos tus chats?',
+        zona: 'bandeja',
+        exp: '"My Inbox" es el panel central izquierdo. Aquí ves todas tus conversaciones ordenadas por fecha con nombre del cliente, canal y último mensaje.'
+      },
+      {
+        q: '¿Dónde filtras tus mensajes por Sin Leer, Todos, Recientes o Destacados?',
+        zona: 'filtros',
+        exp: 'Los filtros Unread / All / Recents / Starred están en la franja superior de la bandeja de entrada — úsalos para encontrar leads pendientes más rápido.'
+      },
+      {
+        q: '¿Dónde ves el historial de mensajes y puedes responderle directamente al cliente?',
+        zona: 'chat',
+        exp: 'El panel central muestra el historial completo de la conversación con el cliente, el canal de contacto y el campo para escribir y enviar tu respuesta.'
+      },
+      {
+        q: '¿Dónde encuentras el Mando de Control para redirigir a un lead por área o sucursal?',
+        zona: 'mando_control',
+        exp: 'El Mando de Control está en el panel derecho (Contact Details). Desde ahí redirigís por área o sucursal y controlas si el chatbot está activo.'
+      },
+      {
+        q: '¿Dónde registras los Datos de Venta del cliente (modelo, precio y tipo de comprador)?',
+        zona: 'datos_venta',
+        exp: 'Los Datos de Venta Individual y Empresa están en el panel derecho, debajo del Mando de Control. Aquí registras precio, RFC, método de pago y cierras la venta.'
+      }
+    ],
+    zonas: {
+      menu_conv:    { x:  7, y: 18, w:  8, h:  5 },
+      bandeja:      { x: 14, y:  7, w: 19, h: 90 },
+      filtros:      { x: 14, y: 14, w: 19, h:  7 },
+      chat:         { x: 33, y:  7, w: 46, h: 83 },
+      mando_control:{ x: 79, y: 34, w: 21, h:  6 },
+      datos_venta:  { x: 79, y: 40, w: 21, h: 12 }
+    }
+  }
+};
+
+const ejState = {};
+
+function startEjercicio(id) {
+  showScreen('ej');
+  const ej = EJERCICIOS[id];
+  document.getElementById('ej-header-title').textContent = ej.titulo;
+  ejState[id] = { current: 0, score: 0, answered: false };
+  renderEjPregunta(id);
+}
+
+function renderEjPregunta(id) {
+  const ej = EJERCICIOS[id];
+  const s  = ejState[id];
+  const body = document.getElementById('ej-active-body');
+
+  if (s.current >= ej.preguntas.length) {
+    renderEjResultado(id);
+    return;
+  }
+
+  const p   = ej.preguntas[s.current];
+  const num = s.current + 1;
+  const tot = ej.preguntas.length;
+  const pct = Math.round(((num - 1) / tot) * 100);
+
+  const zonasHTML = Object.entries(ej.zonas).map(([k, z]) =>
+    `<div class="ej-zone" id="ejz-${id}-${k}"
+          style="left:${z.x}%;top:${z.y}%;width:${z.w}%;height:${z.h}%"
+          onclick="checkZona('${id}','${k}')"></div>`
+  ).join('');
+
+  body.innerHTML = `
+    <div style="padding:14px 14px 40px">
+      <div class="quiz-progress">Pregunta ${num} de ${tot}</div>
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" style="width:${pct}%"></div>
+      </div>
+      <div class="ej-question">${p.q}</div>
+      <div class="ej-hint" id="ej-hint-${id}">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        Toca la zona correcta en la imagen
+      </div>
+      <div class="ej-img-container">
+        <img src="${ej.imagen}" class="ej-img" alt="Panel CRM Comoto" draggable="false">
+        ${zonasHTML}
+      </div>
+      <div class="ej-feedback" id="ej-fb-${id}"></div>
+      <button class="quiz-next-btn" id="ej-nxt-${id}"
+              onclick="nextEjPregunta('${id}')">
+        ${num < tot ? 'Siguiente →' : 'Ver mis resultados'}
+      </button>
+    </div>
+  `;
+
+  s.answered = false;
+}
+
+function checkZona(id, zona) {
+  const s = ejState[id];
+  if (s.answered) return;
+  s.answered = true;
+
+  const ej   = EJERCICIOS[id];
+  const p    = ej.preguntas[s.current];
+  const fb   = document.getElementById(`ej-fb-${id}`);
+  const nxt  = document.getElementById(`ej-nxt-${id}`);
+  const hint = document.getElementById(`ej-hint-${id}`);
+
+  document.querySelectorAll(`[id^="ejz-${id}-"]`).forEach(z => {
+    z.style.pointerEvents = 'none';
+    z.style.cursor = 'default';
+  });
+  if (hint) hint.style.display = 'none';
+
+  if (zona === p.zona) {
+    document.getElementById(`ejz-${id}-${zona}`).classList.add('correct');
+    fb.className = 'ej-feedback fb-correct show';
+    fb.innerHTML = `✅ <strong>¡Correcto!</strong> ${p.exp}`;
+    s.score++;
+  } else {
+    document.getElementById(`ejz-${id}-${zona}`).classList.add('incorrect');
+    document.getElementById(`ejz-${id}-${p.zona}`).classList.add('reveal');
+    fb.className = 'ej-feedback fb-incorrect show';
+    fb.innerHTML = `❌ <strong>No exactamente.</strong> ${p.exp}`;
+  }
+
+  nxt.classList.add('show');
+}
+
+function nextEjPregunta(id) {
+  ejState[id].current++;
+  renderEjPregunta(id);
+}
+
+function renderEjResultado(id) {
+  const s   = ejState[id];
+  const ej  = EJERCICIOS[id];
+  const tot = ej.preguntas.length;
+  const pct = Math.round((s.score / tot) * 100);
+  const body = document.getElementById('ej-active-body');
+
+  const emoji = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : '📚';
+  const msg   = pct >= 80
+    ? '¡Excelente! Ya conoces el CRM como la palma de tu mano.'
+    : pct >= 60
+    ? 'Buen trabajo. Repasa las secciones que fallaste.'
+    : 'Practica de nuevo — el dominio visual del CRM acelera tu trabajo diario.';
+
+  body.innerHTML = `
+    <div style="padding:14px 14px 40px">
+      <div class="quiz-results show">
+        <div class="results-emoji">${emoji}</div>
+        <div class="results-score">${s.score}/${tot}</div>
+        <div class="results-label">Respuestas correctas</div>
+        <div class="results-msg">${msg}</div>
+        <button class="results-retry" onclick="startEjercicio('${id}')">
+          Intentar de nuevo
+        </button>
+        <br><br>
+        <button class="back-btn" style="margin:0 auto" onclick="showScreen('ejercicios')">
+          ← Ver todos los ejercicios
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+
+// ═══════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════
 
