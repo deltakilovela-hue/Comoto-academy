@@ -63,6 +63,14 @@
           <span class="area-cta">Ver módulo <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
         </button>
       </div>
+      <button class="manual-home-btn" onclick="showScreen('manual')">
+        <span class="manual-home-icon">📖</span>
+        <div class="manual-home-text">
+          <span class="manual-home-title">Manual Completo PDF</span>
+          <span class="manual-home-sub">Manual La Garra CRM Comoto 2026 · 27 páginas</span>
+        </div>
+        <svg class="manual-home-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
     </main>
     <footer class="home-footer"><span>Comoto © 2026 · Todos los derechos reservados</span></footer>
   </div>
@@ -90,6 +98,11 @@
       <div class="tab-panel active" id="gerentes-video">
         <div class="video-card">
           <div class="video-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>Asignar a Sucursal</div>
+          <div class="video-thumb" onclick="playVideo(this)">
+            <span class="thumb-badge">Tutorial</span>
+            <div class="thumb-play-btn"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="thumb-label">Asignar a Sucursal</span>
+          </div>
           <video controls preload="none" playsinline>
             <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e8e9e0b0e5e2bb7fd406ae.mp4" type="video/mp4">
           </video>
@@ -286,12 +299,22 @@
       <div class="tab-panel active" id="ventas-video">
         <div class="video-card">
           <div class="video-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>Datos de Llenado — Venta Individual</div>
+          <div class="video-thumb" onclick="playVideo(this)">
+            <span class="thumb-badge">Tutorial</span>
+            <div class="thumb-play-btn"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="thumb-label">Datos de Llenado — Venta Individual</span>
+          </div>
           <video controls preload="none" playsinline>
             <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e7d93d5e482c379bbe8cc8.mp4" type="video/mp4">
           </video>
         </div>
         <div class="video-card">
           <div class="video-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>Datos de Llenado — Venta Empresarial</div>
+          <div class="video-thumb" onclick="playVideo(this)">
+            <span class="thumb-badge">Tutorial</span>
+            <div class="thumb-play-btn"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="thumb-label">Datos de Llenado — Venta Empresarial</span>
+          </div>
           <video controls preload="none" playsinline>
             <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e7d500c02618972e47cd5f.mp4" type="video/mp4">
           </video>
@@ -582,6 +605,11 @@
       <div class="tab-panel active" id="servicio-video">
         <div class="video-card">
           <div class="video-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>Cómo Llenar los Datos en el Área de Servicio</div>
+          <div class="video-thumb" onclick="playVideo(this)">
+            <span class="thumb-badge">Tutorial</span>
+            <div class="thumb-play-btn"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="thumb-label">Cómo Llenar los Datos en el Área de Servicio</span>
+          </div>
           <video controls preload="none" playsinline>
             <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e8ed21b0e5e2bb7fd4fe5b.mp4" type="video/mp4">
           </video>
@@ -763,6 +791,11 @@
       <div class="tab-panel active" id="refacciones-video">
         <div class="video-card">
           <div class="video-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--red)"><path d="M8 5v14l11-7z"/></svg>Venta de Refacción — Cómo Llenar los Datos</div>
+          <div class="video-thumb" onclick="playVideo(this)">
+            <span class="thumb-badge">Tutorial</span>
+            <div class="thumb-play-btn"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="thumb-label">Venta de Refacción — Cómo Llenar los Datos</span>
+          </div>
           <video controls preload="none" playsinline>
             <source src="https://assets.cdn.filesafe.space/KAfNJ7x8VObxBS9xgffk/media/69e8eba3a48992f6899f1937.mp4" type="video/mp4">
           </video>
@@ -896,6 +929,24 @@
       <div class="tab-panel" id="refacciones-quiz">
         <div class="quiz-container"><div class="quiz-q-body"></div></div>
       </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ MANUAL PDF ═══════════════════ -->
+  <div class="screen" id="screen-manual">
+    <header class="area-header area-header--manual">
+      <button class="back-btn" data-target="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>Inicio
+      </button>
+      <div class="header-info">
+        <span class="header-icon">📖</span>
+        <div><div class="header-area">Referencia</div><h2>Manual Completo</h2></div>
+      </div>
+      <a class="manual-open-link" href="manual.pdf" target="_blank">Abrir ↗</a>
+    </header>
+    <div class="pdf-frame-wrap tab-panels">
+      <p class="pdf-mobile-hint">¿No carga el PDF? <a href="manual.pdf" target="_blank">Tócalo aquí para abrirlo</a></p>
+      <iframe class="pdf-iframe" src="manual.pdf" title="Manual La Garra CRM Comoto 2026"></iframe>
     </div>
   </div>
 

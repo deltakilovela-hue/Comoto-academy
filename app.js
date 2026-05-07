@@ -6,6 +6,12 @@
 // NAVIGATION
 // ═══════════════════════════════════════════
 
+function playVideo(thumb) {
+  thumb.classList.add('hidden');
+  const video = thumb.nextElementSibling;
+  video.play();
+}
+
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   const target = document.getElementById('screen-' + id);
