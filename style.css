@@ -317,6 +317,34 @@ img    { max-width: 100%; }
   object-fit: contain;
 }
 
+/* ─── MANUAL TAG ────────────────────────────── */
+.manual-tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px;
+  background: rgba(229,9,20,0.1);
+  border: 1px solid rgba(229,9,20,0.2);
+  border-radius: 20px;
+  font-size: 0.69rem; font-weight: 700;
+  color: #ff8a8a; letter-spacing: 0.3px;
+  margin-bottom: 12px;
+}
+
+.info-box {
+  background: rgba(100,160,255,0.08);
+  border-left: 3px solid rgba(100,160,255,0.5);
+  border-radius: var(--radius-sm);
+  padding: 10px 13px; margin-top: 10px;
+  font-size: 0.82rem; color: rgba(255,255,255,0.75);
+  line-height: 1.5; font-weight: 500;
+}
+
+.mono {
+  font-family: 'Courier New', monospace;
+  background: rgba(255,255,255,0.08);
+  padding: 1px 6px; border-radius: 4px;
+  font-size: 0.85em; color: #e0e0e0;
+}
+
 /* ─── ACCORDION ─────────────────────────────── */
 .accordion { display: flex; flex-direction: column; gap: 8px; }
 
@@ -360,7 +388,7 @@ img    { max-width: 100%; }
   transition: max-height 0.36s var(--ease), padding 0.36s var(--ease);
 }
 .acc-item.open .acc-body {
-  max-height: 1200px;
+  max-height: 2400px;
   padding-bottom: 16px;
 }
 
