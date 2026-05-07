@@ -374,9 +374,9 @@ const EJERCICIOS = {
       }
     ],
     zonas: {
-      canal_selector: { x: 32, y: 67, w: 22, h:  5 },
-      input_mensaje:  { x: 32, y: 72, w: 47, h: 16 },
-      toolbar_iconos: { x: 32, y: 88, w: 47, h:  8 },
+      canal_selector: { x: 32, y: 75, w: 22, h:  5 },
+      input_mensaje:  { x: 32, y: 80, w: 47, h: 12 },
+      toolbar_iconos: { x: 32, y: 92, w: 47, h:  6 },
       sucursal_campo: { x: 79, y: 39, w: 21, h:  8 },
       redirigir_campo:{ x: 79, y: 47, w: 21, h:  7 },
       chatbot_campo:  { x: 79, y: 54, w: 21, h:  7 }
