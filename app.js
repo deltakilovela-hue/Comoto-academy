@@ -409,6 +409,70 @@ const EJERCICIOS = {
         ],
         ans: 1,
         exp: 'El badge rojo indica los días de inactividad — cuántos días lleva ese lead sin recibir una respuesta. Es una alerta de seguimiento pendiente: entre más días, más urgente atenderlo.'
+      },
+      {
+        q: '¿Cuándo usarías "Internal Comment" en lugar de "WhatsApp"?',
+        crop: { x: 608, y: 686, w: 450, h: 52 },
+        opciones: [
+          'Cuando el cliente no tiene WhatsApp activo',
+          'Para dejar una nota que solo verá el equipo interno, sin que llegue al cliente',
+          'Cuando el número del cliente es incorrecto',
+          'Para programar el envío del mensaje para después'
+        ],
+        ans: 1,
+        exp: '"Internal Comment" es para comunicación interna del equipo — el cliente nunca lo ve. Úsalo para dejar contexto, alertas o instrucciones para tus compañeros o gerente.'
+      },
+      {
+        q: '¿Qué indica el número azul (5, 7) que aparece junto al nombre de un contacto en la bandeja?',
+        imagen: 'img/crm-inbox.png',
+        imgW: 404,
+        crop: { x: 0, y: 60, w: 404, h: 330 },
+        opciones: [
+          'Los días que lleva el lead sin atención',
+          'La puntuación de satisfacción del cliente',
+          'La cantidad de mensajes no leídos en esa conversación',
+          'El número de seguimientos enviados'
+        ],
+        ans: 2,
+        exp: 'El badge azul muestra cuántos mensajes del cliente están sin leer en esa conversación. Entre mayor el número, más urgente revisar y responder.'
+      },
+      {
+        q: '¿En qué campo del "Mando de control" dejas un mensaje visible únicamente para el gerente?',
+        imagen: 'img/crm-mando-control.png',
+        imgW: 351,
+        crop: { x: 0, y: 0, w: 351, h: 242 },
+        opciones: [
+          'Sucursal a asignar',
+          'Redirigir al equipo',
+          'Comentario a Gerente',
+          'El Mando de control no tiene ese campo'
+        ],
+        ans: 2,
+        exp: '"Comentario a Gerente" es un campo de texto libre que solo ve gerencia. Úsalo para dejar contexto importante sobre el lead: situación especial, acuerdo verbal, motivo de redirección, etc.'
+      },
+      {
+        q: '¿Qué elemento de la barra de herramientas usarías para enviar una respuesta rápida guardada?',
+        crop: { x: 608, y: 846, w: 910, h: 62 },
+        opciones: [
+          'El ícono de emoji 😊',
+          'El ícono de adjuntar 📎',
+          'El ícono de fragmentos o plantillas ⚡',
+          'El ícono de nota de voz 🎙️'
+        ],
+        ans: 2,
+        exp: 'Los fragmentos (⚡) y plantillas de WhatsApp son respuestas predefinidas que ahorran tiempo. Úsalos para saludos, seguimientos o respuestas frecuentes sin tener que escribirlas cada vez.'
+      },
+      {
+        q: '¿Para qué sirve el ícono de 🎙️ en la barra de herramientas del chat?',
+        crop: { x: 608, y: 846, w: 910, h: 62 },
+        opciones: [
+          'Para escuchar los mensajes de voz que envió el cliente',
+          'Para activar el dictado de voz en el teclado del sistema',
+          'Para enviar una nota de voz directamente al cliente por WhatsApp',
+          'Para traducir el mensaje antes de enviarlo'
+        ],
+        ans: 2,
+        exp: 'El ícono 🎙️ te permite grabar y enviar notas de voz al cliente por WhatsApp. Es útil cuando necesitas explicar algo complejo o quieres dar un toque más personal a tu comunicación.'
       }
     ]
   },
@@ -465,6 +529,78 @@ const EJERCICIOS = {
         ],
         ans: 3,
         exp: '"Refacciones" es donde ingresas el nombre de la pieza o código Honda, VIN, precio y cierras la transacción con "REFACCIÓN VENDIDA".'
+      },
+      {
+        q: '¿En qué sección registrarías la venta de motos a una empresa (persona moral)?',
+        crop: { x: 0, y: 0, w: 361, h: 320 },
+        opciones: [
+          'Datos de Venta Individual',
+          'Datos de Venta Empresa',
+          'Mando de control',
+          'Contacto'
+        ],
+        ans: 1,
+        exp: '"Datos de Venta Empresa" es el formulario para personas morales. Incluye campos como Business name, Street address, RFC Empresa y cantidad de motos — diferente al de persona física.'
+      },
+      {
+        q: '¿Para qué sirve la pestaña "DND" en el panel de contacto?',
+        crop: { x: 0, y: 0, w: 361, h: 55 },
+        opciones: [
+          'Para ver el Mando de control expandido',
+          'Para configurar que no lleguen mensajes automáticos a ese contacto (Do Not Disturb)',
+          'Para eliminar al contacto del sistema',
+          'Para ver reportes del lead'
+        ],
+        ans: 1,
+        exp: '"DND" significa Do Not Disturb — actívalo cuando el cliente pide no recibir mensajes automáticos. El sistema respetará esa preferencia y no enviará automatizaciones a ese contacto.'
+      },
+      {
+        q: '¿En qué sección actualizarías el número de teléfono o email de un cliente?',
+        crop: { x: 0, y: 290, w: 361, h: 270 },
+        opciones: [
+          'Mando de control',
+          'Refacciones',
+          'Contacto',
+          'Automatizaciones'
+        ],
+        ans: 2,
+        exp: '"Contacto" es la sección donde están los datos de comunicación del cliente: teléfono, email, dirección. Actualízalos cada que el cliente te dé información nueva para mantener el perfil correcto.'
+      },
+      {
+        q: '¿Qué sección usarías para activar una secuencia de mensajes automáticos de seguimiento?',
+        crop: { x: 0, y: 290, w: 361, h: 270 },
+        opciones: [
+          'Mando de control',
+          'Datos de Venta Individual',
+          'Contacto',
+          'Automatizaciones'
+        ],
+        ans: 3,
+        exp: '"Automatizaciones" permite activar flujos de mensajes programados — por ejemplo, seguimiento 24h después de la visita, recordatorio de servicio o encuesta postventa. No confundas con el Mando de control.'
+      },
+      {
+        q: 'Si un cliente lleva su moto al taller Y también quiere comprar una pieza, ¿en cuántas secciones debes capturar información?',
+        crop: { x: 0, y: 0, w: 361, h: 320 },
+        opciones: [
+          'Solo 1 — en Servicio',
+          'Solo 1 — en Refacciones',
+          '2 — en Servicio y en Refacciones',
+          '3 — en Mando de control, Servicio y Refacciones'
+        ],
+        ans: 2,
+        exp: 'Correcto — cada transacción va en su sección. El servicio (taller) se registra en "Servicio" y la pieza en "Refacciones". Ambas pueden coexistir en el mismo lead.'
+      },
+      {
+        q: '¿Cuántas pestañas principales tiene el panel de contacto y cuáles son?',
+        crop: { x: 0, y: 0, w: 361, h: 55 },
+        opciones: [
+          '2 pestañas: Todos los campos y DND',
+          '3 pestañas: Todos los campos, DND y Acciones',
+          '4 pestañas: Campos, DND, Acciones y Automatizaciones',
+          '2 pestañas: Conversaciones y Campos'
+        ],
+        ans: 1,
+        exp: 'El panel tiene 3 pestañas: "Todos los campos" (toda la info del contacto), "DND" (Do Not Disturb — gestión de mensajes automáticos) y "Acciones" (acciones rápidas sobre el lead).'
       }
     ]
   }
@@ -786,6 +922,96 @@ const EJERCICIOS = {
         ],
         ans: 2,
         exp: '"Estancado / Cambio de estrategia" se usa cuando el lead dejó de avanzar pero no está definitivamente perdido — hay oportunidad de retomarlo con un enfoque distinto. "Venta Perdida" es solo cuando el cliente rechaza definitivamente.'
+      },
+      {
+        q: '¿Qué campo registra el nombre oficial de la empresa compradora?',
+        crop: { x: 0, y: 0, w: 343, h: 170 },
+        opciones: [
+          'Street address',
+          'Business name',
+          'R.F.C. (Empresa)',
+          'Etapa de la Venta (Empresa)'
+        ],
+        ans: 1,
+        exp: '"Business name" es el nombre legal o comercial de la empresa compradora. Es el primer campo del formulario y sirve para identificar a la persona moral en todo el proceso.'
+      },
+      {
+        q: '¿Para qué sirve el campo "Street address" en el formulario de Venta Empresa?',
+        crop: { x: 0, y: 0, w: 343, h: 170 },
+        opciones: [
+          'Para registrar la dirección de la agencia donde se hará la entrega',
+          'Para capturar la dirección fiscal o de entrega de la empresa compradora',
+          'Para indicar la ruta de entrega de la moto',
+          'Para registrar la dirección del asesor de ventas'
+        ],
+        ans: 1,
+        exp: '"Street address" captura la dirección de la empresa — ya sea la fiscal para facturación o la dirección donde se entregará la moto. Confirma siempre cuál aplica en cada caso.'
+      },
+      {
+        q: '¿Qué campo usas cuando una empresa compra más de una moto en la misma operación?',
+        crop: { x: 0, y: 175, w: 343, h: 165 },
+        opciones: [
+          'Moto elegida (empresa)',
+          'Promoción adquirida (Empresa)',
+          'Cantidad de motocicletas adquiridas (Empresa)',
+          'Modelo / Año modelo'
+        ],
+        ans: 2,
+        exp: '"Cantidad de motocicletas adquiridas (Empresa)" registra el número total de unidades de la operación. Es clave para calcular el monto total y para el reporte de ventas corporativas.'
+      },
+      {
+        q: '¿Qué campo registra el monto total cobrado a la empresa por la operación?',
+        crop: { x: 0, y: 490, w: 343, h: 140 },
+        opciones: [
+          'Etapa de la Venta (Empresa)',
+          'Cantidad Facturada (Empresa)',
+          'Cantidad de motocicletas adquiridas (Empresa)',
+          'Promoción adquirida (Empresa)'
+        ],
+        ans: 1,
+        exp: '"Cantidad Facturada (Empresa)" es el monto total de la operación. Regístralo con precisión — debe coincidir con la factura emitida a la empresa para que el registro contable sea correcto.'
+      },
+      {
+        q: '¿En qué etapa colocas el lead de empresa cuando estás haciendo el primer contacto y presentando los modelos?',
+        imagen: 'img/crm-empresa-2.png',
+        imgW: 340,
+        crop: { x: 0, y: 0, w: 340, h: 283 },
+        opciones: [
+          'Facturación',
+          'Nutrición primera etapa',
+          'Casi listo para agendar',
+          'Entrega'
+        ],
+        ans: 1,
+        exp: '"Nutrición primera etapa" es el punto de partida — el lead está explorando opciones y el asesor lo está educando sobre los modelos y beneficios. Avanza a la siguiente etapa cuando muestre interés concreto.'
+      },
+      {
+        q: '¿Qué etapa indica que los trámites de pago o crédito están en proceso?',
+        imagen: 'img/crm-empresa-2.png',
+        imgW: 340,
+        crop: { x: 0, y: 0, w: 340, h: 283 },
+        opciones: [
+          'Entrega',
+          'Nutrición primera etapa',
+          'Casi listo para agendar',
+          'Facturación'
+        ],
+        ans: 3,
+        exp: '"Facturación" indica que la empresa ya tomó la decisión de compra y se está procesando el pago, crédito o los documentos fiscales. El siguiente paso es "Entrega".'
+      },
+      {
+        q: '¿Cuándo usarías "Venta Perdida" en lugar de "Estancado / Cambio de estrategia"?',
+        imagen: 'img/crm-empresa-2.png',
+        imgW: 340,
+        crop: { x: 0, y: 0, w: 340, h: 283 },
+        opciones: [
+          'Cuando el cliente no contesta por más de 3 días',
+          'Cuando el cliente rechaza definitivamente la compra sin posibilidad de retomarlo',
+          'Cuando el presupuesto de la empresa no coincide con el precio',
+          'Cuando la moto solicitada no está en inventario'
+        ],
+        ans: 1,
+        exp: '"Venta Perdida" es definitivo — el cliente dejó claro que no comprará. "Estancado / Cambio de estrategia" es para leads que se enfriaron pero pueden retomarse con otro enfoque o en otro momento.'
       }
     ]
   },
@@ -846,6 +1072,82 @@ const EJERCICIOS = {
         ],
         ans: 2,
         exp: '"Post Venta" se usa una vez que el cliente ya recibió su moto. Es la etapa final del proceso y sirve para dar seguimiento a satisfacción y referidos.'
+      },
+      {
+        q: '¿Qué campo usas para seleccionar el modelo exacto de moto que el cliente está comprando?',
+        crop: { x: 0, y: 55, w: 340, h: 130 },
+        opciones: [
+          'Fecha oficial de compra',
+          'Selecciona la moto',
+          'R.F.C.',
+          'Método de pago'
+        ],
+        ans: 1,
+        exp: '"Selecciona la moto" es donde registras el modelo específico que el cliente adquiere. Elige la opción exacta del catálogo para que el inventario y la factura cuadren correctamente.'
+      },
+      {
+        q: '¿Qué campo defines para registrar si la moto se pagó de contado, con crédito o financiamiento?',
+        crop: { x: 0, y: 145, w: 340, h: 120 },
+        opciones: [
+          'Pago a meses',
+          'Promoción adquirida',
+          'Método de pago',
+          'Fecha oficial de compra'
+        ],
+        ans: 2,
+        exp: '"Método de pago" especifica la forma de pago: contado, tarjeta, transferencia, crédito bancario, etc. Es clave para que el área de finanzas procese correctamente la transacción.'
+      },
+      {
+        q: '¿Qué campo llenas si el cliente va a pagar en mensualidades?',
+        crop: { x: 0, y: 195, w: 340, h: 110 },
+        opciones: [
+          'Promoción adquirida',
+          'Pago a meses — Meses a pagar',
+          'Medio de contacto preferido',
+          'R.F.C.'
+        ],
+        ans: 1,
+        exp: '"Pago a meses / Meses a pagar" registra el número de mensualidades acordadas. Complétalo siempre que el método de pago sea financiamiento — es parte del contrato oficial.'
+      },
+      {
+        q: '¿Qué campo registras si el cliente aprovechó una oferta o descuento especial al momento de la compra?',
+        crop: { x: 0, y: 255, w: 340, h: 100 },
+        opciones: [
+          'Medio de contacto preferido',
+          'Método de pago',
+          'Promoción adquirida',
+          'Meses a pagar'
+        ],
+        ans: 2,
+        exp: '"Promoción adquirida" documenta la oferta que el cliente aprovechó — descuento, accesorio incluido, tasa especial, etc. Registrarlo evita disputas y permite medir la efectividad de las campañas.'
+      },
+      {
+        q: '¿En qué campo escribes observaciones importantes sobre el cliente que todo el equipo debe conocer?',
+        imagen: 'img/crm-ventas-2.png',
+        imgW: 351,
+        crop: { x: 0, y: 0, w: 351, h: 306 },
+        opciones: [
+          'Modelo de interés',
+          'Cantidad facturada',
+          'Etapa de la venta',
+          'Notas de asesor'
+        ],
+        ans: 3,
+        exp: '"Notas de asesor" es un campo de texto libre para capturar contexto relevante: preferencias del cliente, acuerdos verbales, motivo de objeción, etc. Ayuda a cualquier asesor que tome el lead después.'
+      },
+      {
+        q: '¿Cuál es la primera etapa del proceso de venta individual y qué indica?',
+        imagen: 'img/crm-ventas-3.png',
+        imgW: 343,
+        crop: { x: 0, y: 0, w: 343, h: 306 },
+        opciones: [
+          'Trámite de crédito — el cliente ya aprobó el financiamiento',
+          'Post Venta — la venta ya se realizó y se da seguimiento',
+          'Nutrición de asesor — el lead está en proceso de seguimiento antes de decidir',
+          'Facturación — el cliente ya firmó el contrato'
+        ],
+        ans: 2,
+        exp: '"Nutrición de asesor" es la primera etapa — el lead llegó al CRM y el asesor está construyendo la relación, resolviendo dudas y guiando al cliente hacia la decisión de compra.'
       }
     ]
   }
