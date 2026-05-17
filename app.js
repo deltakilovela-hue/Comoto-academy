@@ -470,6 +470,54 @@ const EJERCICIOS = {
   }
   ,
 
+  empresa: {
+    titulo: 'Venta Empresa',
+    imagen: 'img/crm-empresa-1.png',
+    imgW: 343,
+    preguntas: [
+      {
+        q: '¿Qué dato fiscal es indispensable registrar para poder facturar a una empresa?',
+        crop: { x: 0, y: 320, w: 343, h: 200 },
+        opciones: [
+          'Business name',
+          'Street address',
+          'R.F.C. (Empresa)',
+          'Cantidad de motocicletas adquiridas (Empresa)'
+        ],
+        ans: 2,
+        exp: 'El "R.F.C. (Empresa)" es obligatorio para emitir la factura fiscal a nombre de la empresa compradora. Sin él no se puede completar la facturación.'
+      },
+      {
+        q: '¿Qué etapa usas cuando el trámite ya está aprobado y solo falta entregar la moto a la empresa?',
+        imagen: 'img/crm-empresa-2.png',
+        imgW: 340,
+        crop: { x: 0, y: 0, w: 340, h: 283 },
+        opciones: [
+          'Facturación',
+          'Post Venta',
+          'Casi listo para agendar',
+          'Entrega'
+        ],
+        ans: 3,
+        exp: '"Entrega" indica que el crédito o pago está aprobado y el proceso avanza hacia la entrega física de la moto. Pasa a "Post Venta" una vez que la empresa recibe su moto.'
+      },
+      {
+        q: '¿En qué etapa colocas el lead de empresa cuando las negociaciones se pausaron sin llegar a un acuerdo?',
+        imagen: 'img/crm-empresa-2.png',
+        imgW: 340,
+        crop: { x: 0, y: 0, w: 340, h: 283 },
+        opciones: [
+          'Venta Perdida',
+          'Nutrición primera etapa',
+          'Estancado / Cambio de estrategia',
+          'Post Venta'
+        ],
+        ans: 2,
+        exp: '"Estancado / Cambio de estrategia" se usa cuando el lead dejó de avanzar pero no está definitivamente perdido — hay oportunidad de retomarlo con un enfoque distinto. "Venta Perdida" es solo cuando el cliente rechaza definitivamente.'
+      }
+    ]
+  },
+
   ventas: {
     titulo: 'Cierre de Venta',
     imagen: 'img/crm-ventas-1.png',
