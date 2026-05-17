@@ -428,7 +428,7 @@ const EJERCICIOS = {
     preguntas: [
       {
         q: '¿Desde qué sección del panel derecho redirigís el lead a otra área o sucursal?',
-        crop: { x: 1208, y: 338, w: 712, h: 78 },
+        crop: { x: 1220, y: 348, w: 700, h: 48 },
         opciones: [
           'Datos de Venta Individual',
           'Mando de Control',
@@ -440,7 +440,7 @@ const EJERCICIOS = {
       },
       {
         q: '¿En qué sección llenarías el formulario para cerrar la venta de una moto?',
-        crop: { x: 1208, y: 410, w: 712, h: 56 },
+        crop: { x: 1220, y: 418, w: 700, h: 48 },
         opciones: [
           'Mando de Control',
           'Servicio',
@@ -452,7 +452,7 @@ const EJERCICIOS = {
       },
       {
         q: '¿Esta sección del panel derecho se usa cuando el cliente...?',
-        crop: { x: 1208, y: 508, w: 712, h: 56 },
+        crop: { x: 1220, y: 518, w: 700, h: 48 },
         opciones: [
           'Compra una moto nueva en la agencia',
           'Trae su moto al taller para mantenimiento o reparación',
@@ -464,7 +464,7 @@ const EJERCICIOS = {
       },
       {
         q: '¿Qué tipo de transacción registras desde esta sección?',
-        crop: { x: 1208, y: 558, w: 712, h: 56 },
+        crop: { x: 1220, y: 568, w: 700, h: 48 },
         opciones: [
           'La venta de una moto nueva (modelo, precio, RFC)',
           'La recepción de la moto en taller para servicio',
