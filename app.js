@@ -470,6 +470,140 @@ const EJERCICIOS = {
   }
   ,
 
+  refacciones: {
+    titulo: 'Refacciones',
+    imagen: 'img/crm-refacciones-1.png',
+    imgW: 345,
+    preguntas: [
+      {
+        q: '¿Qué campo identifica de manera única la moto del cliente en el módulo de Refacciones?',
+        crop: { x: 0, y: 0, w: 345, h: 170 },
+        opciones: [
+          'Modelo / Año modelo',
+          'VIN o NIM',
+          'Nombre de pieza o código',
+          'Sección'
+        ],
+        ans: 1,
+        exp: 'El VIN o NIM es el código único del vehículo — como su CURP. Usarlo garantiza que la refacción se asocia correctamente a la moto exacta del cliente y queda en su historial.'
+      },
+      {
+        q: '¿Qué registras en el campo "Historial de productos adquiridos"?',
+        crop: { x: 0, y: 140, w: 345, h: 150 },
+        opciones: [
+          'Las refacciones que el cliente ha comprado previamente en la agencia',
+          'Los proveedores de refacciones disponibles en catálogo',
+          'El inventario actual de piezas en el almacén',
+          'Las devoluciones o garantías de refacciones del cliente'
+        ],
+        ans: 0,
+        exp: '"Historial de productos adquiridos" muestra las piezas que ese cliente ya ha comprado antes. Te ayuda a anticipar necesidades, detectar clientes recurrentes y hacer seguimiento postventa.'
+      },
+      {
+        q: '¿Qué campo llenas para indicar cómo pagará el cliente la pieza?',
+        crop: { x: 0, y: 210, w: 345, h: 90 },
+        opciones: [
+          'Nombre de pieza o código',
+          'Costo de refacciones',
+          'Método de pago refacción',
+          'Historial de productos adquiridos'
+        ],
+        ans: 2,
+        exp: '"Método de pago refacción" especifica si el cliente paga en efectivo, tarjeta, transferencia u otra modalidad. Es importante para que el cierre de caja cuadre correctamente.'
+      },
+      {
+        q: '¿Qué debes registrar en "Nombre de pieza o código" al gestionar una refacción?',
+        crop: { x: 0, y: 270, w: 345, h: 90 },
+        opciones: [
+          'El nombre del técnico que instalará la pieza',
+          'El nombre comercial o código de catálogo de la refacción solicitada',
+          'El número de pedido enviado al distribuidor',
+          'El tiempo estimado de instalación en horas'
+        ],
+        ans: 1,
+        exp: 'En "Nombre de pieza o código" capturas ya sea el nombre descriptivo (ej. "filtro de aceite") o el código Honda del catálogo. Esto permite identificar y rastrear la pieza con precisión.'
+      },
+      {
+        q: '¿Para qué sirve el campo "Adjuntar foto (si aplica)" en Refacciones?',
+        crop: { x: 0, y: 330, w: 345, h: 130 },
+        opciones: [
+          'Para fotografiar al cliente antes de la atención',
+          'Para subir fotos del almacén de piezas disponibles',
+          'Para adjuntar imagen de la pieza o del daño que el cliente necesita reparar',
+          'Para guardar la foto de la factura del proveedor'
+        ],
+        ans: 2,
+        exp: '"Adjuntar foto" es útil cuando el cliente envía imagen de la pieza dañada o cuando necesitas mostrarle al almacén exactamente qué pieza se requiere. Acelera el proceso de identificación.'
+      },
+      {
+        q: '¿Qué campo registra el monto total cobrado al cliente por la pieza?',
+        crop: { x: 0, y: 490, w: 345, h: 149 },
+        opciones: [
+          'Historial de productos adquiridos',
+          'Nombre de pieza o código',
+          'Método de pago refacción',
+          'Costo de refacciones'
+        ],
+        ans: 3,
+        exp: '"Costo de refacciones" es el precio final cobrado al cliente. Regístralo antes de activar "REFACCIÓN VENDIDA" para que el cierre de la transacción quede completo.'
+      },
+      {
+        q: '¿Qué indica "REFACCIÓN VENDIDA" cuando está activado?',
+        crop: { x: 0, y: 490, w: 345, h: 149 },
+        opciones: [
+          'Que la pieza está en camino desde el distribuidor',
+          'Que la refacción fue cotizada y está en espera de pago',
+          'Que la pieza fue vendida y la transacción está cerrada',
+          'Que la pieza está reservada pero aún no pagada'
+        ],
+        ans: 2,
+        exp: '"REFACCIÓN VENDIDA" es el cierre oficial de la venta. Al activarlo confirmas que la pieza fue entregada y cobrada. No lo actives hasta que el cliente tenga la pieza en mano.'
+      },
+      {
+        q: '¿En qué sección colocas el lead cuando el cliente quiere la pieza pero aún se está calculando el precio?',
+        imagen: 'img/crm-refacciones-2.png',
+        imgW: 345,
+        crop: { x: 0, y: 0, w: 345, h: 249 },
+        opciones: [
+          'Pedido a HDM',
+          'En cotización',
+          'Refacción en sucursal',
+          'Prospecto perdido'
+        ],
+        ans: 1,
+        exp: '"En cotización" es la primera sección del proceso — el cliente mostró interés pero el precio o disponibilidad aún se está confirmando. Desde aquí avanzas al siguiente paso una vez tengas la información.'
+      },
+      {
+        q: '¿Qué sección usas cuando la pieza no está en la agencia y hay que pedirla a Honda de México?',
+        imagen: 'img/crm-refacciones-2.png',
+        imgW: 345,
+        crop: { x: 0, y: 0, w: 345, h: 249 },
+        opciones: [
+          'En cotización',
+          'Refacción en sucursal',
+          'Pedido a HDM',
+          'Entregado / Facturado'
+        ],
+        ans: 2,
+        exp: '"Pedido a HDM" (Honda de México) se usa cuando la pieza no está disponible localmente y debes solicitarla al distribuidor nacional. Mantén al cliente informado del tiempo de llegada.'
+      },
+      {
+        q: '¿Qué sección indica que la pieza ya está disponible en la agencia y el cliente puede pasar a recogerla?',
+        imagen: 'img/crm-refacciones-2.png',
+        imgW: 345,
+        crop: { x: 0, y: 0, w: 345, h: 249 },
+        opciones: [
+          'Pedido a HDM',
+          'Pedido recurrente',
+          'Entregado / Facturado',
+          'Refacción en sucursal'
+        ],
+        ans: 3,
+        exp: '"Refacción en sucursal" confirma que la pieza llegó y ya está físicamente en la agencia. Es el momento de contactar al cliente para avisarle que puede pasar a recogerla.'
+      }
+    ]
+  },
+
   servicio: {
     titulo: 'Servicio al Taller',
     imagen: 'img/crm-servicio-1.png',
