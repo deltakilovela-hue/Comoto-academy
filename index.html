@@ -79,6 +79,14 @@
         </div>
         <svg class="manual-home-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
       </button>
+      <button class="manual-home-btn guias-home-btn" onclick="showScreen('guias')">
+        <span class="manual-home-icon">⚡</span>
+        <div class="manual-home-text">
+          <span class="manual-home-title">Guías Rápidas</span>
+          <span class="manual-home-sub">Procesos paso a paso para dominar el CRM</span>
+        </div>
+        <svg class="manual-home-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
     </main>
     <footer class="home-footer"><span>Comoto © 2026 · Todos los derechos reservados</span></footer>
   </div>
@@ -1025,6 +1033,615 @@
     </header>
     <div class="tab-panels" id="ej-active-body">
       <!-- Rendered by JS -->
+    </div>
+  </div>
+
+  <!-- ═══════════════════ GUÍAS RÁPIDAS LIST ═══════════════════ -->
+  <div class="screen" id="screen-guias">
+    <header class="area-header area-header--guias">
+      <button class="back-btn" data-target="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>Inicio
+      </button>
+      <div class="header-info">
+        <span class="header-icon">⚡</span>
+        <div><div class="header-area">Referencia</div><h2>Guías Rápidas</h2></div>
+      </div>
+    </header>
+    <div class="tab-panels">
+      <div style="padding:16px 16px 40px">
+        <p class="ej-list-intro">Consulta estas guías visuales para dominar los procesos clave del CRM paso a paso.</p>
+        <button class="ej-list-card" onclick="showScreen('guia-wa')">
+          <div class="ej-list-icon">💬</div>
+          <div class="ej-list-body">
+            <div class="ej-list-title">Enviar Plantilla de WhatsApp</div>
+            <div class="ej-list-desc">Cómo contactar a un cliente fuera de la ventana de 24 horas usando una plantilla</div>
+            <div class="ej-list-meta">4 pasos · Canal WhatsApp</div>
+          </div>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;color:var(--text-dim)"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button class="ej-list-card" style="margin-top:10px" onclick="showScreen('guia-etapas')">
+          <div class="ej-list-icon">🏍️</div>
+          <div class="ej-list-body">
+            <div class="ej-list-title">Etapas de la Venta Individual</div>
+            <div class="ej-list-desc">Entiende cada columna del tablero y cómo mover leads mantiene el control del equipo</div>
+            <div class="ej-list-meta">10 etapas · Pipeline de ventas</div>
+          </div>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;color:var(--text-dim)"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button class="ej-list-card" style="margin-top:10px" onclick="showScreen('guia-empresa')">
+          <div class="ej-list-icon">🏢</div>
+          <div class="ej-list-body">
+            <div class="ej-list-title">Etapas de la Venta Empresa</div>
+            <div class="ej-list-desc">Registra correctamente ventas a personas morales y controla el pipeline de alto valor</div>
+            <div class="ej-list-meta">7 etapas · Venta corporativa</div>
+          </div>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;color:var(--text-dim)"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button class="ej-list-card" style="margin-top:10px" onclick="showScreen('guia-servicio')">
+          <div class="ej-list-icon">🔧</div>
+          <div class="ej-list-body">
+            <div class="ej-list-title">Registro de Servicio al Taller</div>
+            <div class="ej-list-desc">Estaciones, cierre de orden y cómo enviar la encuesta de satisfacción al cliente</div>
+            <div class="ej-list-meta">8 estaciones · Servicio + encuesta</div>
+          </div>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;color:var(--text-dim)"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button class="ej-list-card" style="margin-top:10px" onclick="showScreen('guia-refacciones')">
+          <div class="ej-list-icon">🔩</div>
+          <div class="ej-list-body">
+            <div class="ej-list-title">Registro de Venta de Refacciones</div>
+            <div class="ej-list-desc">Secciones del proceso, cierre de venta y control de piezas vendidas</div>
+            <div class="ej-list-meta">6 secciones · Refacciones</div>
+          </div>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;color:var(--text-dim)"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ GUÍA: PLANTILLA WHATSAPP ═══════════════════ -->
+  <div class="screen" id="screen-guia-wa">
+    <header class="area-header area-header--guias">
+      <button class="back-btn" data-target="guias">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>Guías
+      </button>
+      <div class="header-info">
+        <span class="header-icon">💬</span>
+        <div><div class="header-area">Guía Rápida</div><h2>Plantilla WhatsApp</h2></div>
+      </div>
+    </header>
+    <div class="tab-panels">
+      <div class="guia-body">
+
+        <div class="guia-intro">
+          <p>Cuando el cliente <strong>no ha enviado un mensaje en las últimas 24 horas</strong>, el chat se bloquea. Para contactarlo debes enviar una <strong>plantilla de WhatsApp</strong> previamente aprobada.</p>
+        </div>
+
+        <!-- PASO 1 -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num">1</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">Abre la conversación del cliente</div>
+              <div class="guia-step-desc">En el CRM ve a <strong>My Inbox</strong> o busca al cliente. Haz clic en su conversación para abrir el chat.</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap">
+            <img src="img/crm-wa-template-4.png" alt="Vista completa del CRM con conversación abierta" class="guia-img">
+          </div>
+        </div>
+
+        <!-- PASO 2 -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num">2</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">Ubica el botón "Seleccione una plantilla"</div>
+              <div class="guia-step-desc">En la parte inferior del chat aparece el aviso de <em>"El usuario no ha iniciado ningún mensaje en las últimas 24 horas"</em> y el botón azul <strong>Seleccione una plantilla</strong>. Haz clic en él.</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap">
+            <img src="img/crm-wa-template-2.png" alt="Botón Seleccione una plantilla en el chat" class="guia-img">
+          </div>
+        </div>
+
+        <!-- PASO 3 -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num">3</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">Elige la plantilla en el modal</div>
+              <div class="guia-step-desc">Se abre el modal <strong>"Subir Plantilla WhatsApp"</strong>. Despliega el selector y elige la plantilla adecuada según el objetivo del mensaje (activación, reactivación, invitación, etc.).</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap">
+            <img src="img/crm-wa-template-1.png" alt="Modal con listado de plantillas disponibles" class="guia-img">
+          </div>
+        </div>
+
+        <!-- PASO 4 -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num">4</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">Revisa la vista previa y envía</div>
+              <div class="guia-step-desc">Al seleccionar la plantilla verás su contenido y una <strong>vista previa del mensaje</strong> como aparecerá en WhatsApp. Confirma que es el mensaje correcto y presiona <strong>Enviar</strong>.</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap">
+            <img src="img/crm-wa-template-3.png" alt="Vista previa de la plantilla seleccionada" class="guia-img">
+          </div>
+        </div>
+
+        <div class="guia-tip">
+          <span class="guia-tip-icon">💡</span>
+          <div><strong>Consejo:</strong> Usa plantillas de tipo <em>MARKETING</em> para re-enganche y <em>UTILITY</em> para confirmaciones de cita o servicio. Asegúrate de usar la plantilla correcta para cada situación.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ GUÍA: ETAPAS DE LA VENTA ═══════════════════ -->
+  <div class="screen" id="screen-guia-etapas">
+    <header class="area-header area-header--guias">
+      <button class="back-btn" data-target="guias">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>Guías
+      </button>
+      <div class="header-info">
+        <span class="header-icon">🏍️</span>
+        <div><div class="header-area">Guía Rápida</div><h2>Etapas de la Venta</h2></div>
+      </div>
+    </header>
+    <div class="tab-panels">
+      <div class="guia-body">
+
+        <!-- ★ BLOQUE PRINCIPAL: REGISTRO DE VENTA ★ -->
+        <div class="guia-venta-hero">
+          <div class="guia-venta-hero-badge">⭐ LO MÁS IMPORTANTE</div>
+          <div class="guia-venta-hero-title">Registra la venta correctamente</div>
+          <div class="guia-venta-hero-sub">Sin estos dos campos llenados, <strong>la venta no se contabiliza</strong> para tu comisión ni aparece en los reportes del gerente.</div>
+          <div class="guia-venta-hero-body">
+            <div class="guia-img-wrap" style="padding:0 0 12px">
+              <img src="img/crm-comision.png" alt="Panel de registro de venta con Cantidad facturada y Venta Realizada" class="guia-img" style="max-width:280px;margin:0 auto;display:block;border-radius:10px">
+            </div>
+            <div class="guia-campos-list">
+              <div class="guia-campo-item guia-campo--etapa">
+                <div class="guia-campo-label">1. Etapa de la venta</div>
+                <div class="guia-campo-val">→ Cambia a <strong>"Facturación"</strong></div>
+                <div class="guia-campo-why">Mueve el lead a la columna correcta del tablero para que el gerente vea el avance.</div>
+              </div>
+              <div class="guia-campo-item guia-campo--monto">
+                <div class="guia-campo-label">2. Cantidad facturada</div>
+                <div class="guia-campo-val">→ Escribe el monto real de la moto <span class="guia-campo-ej">ej. MXN 39,990</span></div>
+                <div class="guia-campo-why">Este valor alimenta el reporte de ventas y el cálculo de comisiones del asesor.</div>
+              </div>
+              <div class="guia-campo-item guia-campo--venta">
+                <div class="guia-campo-label">3. Marcar "Venta Realizada"</div>
+                <div class="guia-campo-val">→ Activa el campo <strong>🏅 VENTA REALIZADA</strong></div>
+                <div class="guia-campo-why">Confirma la venta en el sistema. Sin esto el lead no se cuenta como ganado aunque esté en Facturación.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="guia-intro">
+          <p>El pipeline de ventas está dividido en <strong>10 etapas</strong>. Mover al cliente a la etapa correcta mantiene el tablero limpio, permite que el gerente monitoree el avance en tiempo real y evita que los leads se pierdan entre el equipo.</p>
+        </div>
+
+        <!-- TABLERO PARTE 1 -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num" style="background:linear-gradient(135deg,#1a6bbd,#4ca3f5)">📋</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">El tablero: columnas de inicio</div>
+              <div class="guia-step-desc">Cada columna representa una etapa. La cabecera muestra cuántos clientes hay y el valor total acumulado. Las primeras columnas van desde el lead nuevo hasta el trámite de crédito.</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap">
+            <img src="img/crm-etapas-2.png" alt="Tablero parte 1: Nuevo Lead, Perfilamiento, Nutrición, Trámite de Crédito, Facturación" class="guia-img">
+          </div>
+        </div>
+
+        <!-- TABLERO PARTE 2 -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num" style="background:linear-gradient(135deg,#1a6bbd,#4ca3f5)">📋</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">El tablero: etapas finales</div>
+              <div class="guia-step-desc">Las columnas del cierre muestran el proceso de entrega, las ventas concretadas en Post Venta y los casos que requieren cambio de estrategia o que se perdieron.</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap">
+            <img src="img/crm-etapas-3.png" alt="Tablero parte 2: Entrega, Post Venta, Estancados, Venta perdida" class="guia-img">
+          </div>
+        </div>
+
+        <!-- SELECTOR DE ETAPA -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num">🎯</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">Cómo cambiar la etapa de un lead</div>
+              <div class="guia-step-desc">Dentro del contacto, busca el campo <strong>"Etapa de la venta"</strong> y selecciona la etapa actual del proceso. El lead se mueve automáticamente a esa columna en el tablero.</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap" style="display:flex;justify-content:center">
+            <img src="img/crm-etapas-1.png" alt="Selector desplegable de etapas de la venta" class="guia-img" style="max-width:240px;width:100%">
+          </div>
+        </div>
+
+        <!-- ETAPAS EXPLICADAS -->
+        <div class="guia-etapas-grid">
+          <div class="guia-etapa-card guia-etapa--lead">
+            <div class="guia-etapa-name">🆕 Nuevo Lead</div>
+            <div class="guia-etapa-desc">Prospecto recién recibido. Aún sin contacto ni calificación.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--perfil">
+            <div class="guia-etapa-name">🔍 Perfilamiento</div>
+            <div class="guia-etapa-desc">Ya se estableció contacto. Se está identificando necesidad, modelo y capacidad de pago.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--nutri">
+            <div class="guia-etapa-name">📚 Nutrición de asesor</div>
+            <div class="guia-etapa-desc">El asesor trabaja activamente el lead enviando información y resolviendo dudas.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--nutri">
+            <div class="guia-etapa-name">📅 Nutrición / listo para agendar</div>
+            <div class="guia-etapa-desc">Cliente interesado y listo para recibir una cita en el concesionario.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--credito">
+            <div class="guia-etapa-name">💳 Trámite de crédito</div>
+            <div class="guia-etapa-desc">El cliente decidió comprar. Se está gestionando el financiamiento o los documentos.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--credito">
+            <div class="guia-etapa-name">🧾 Facturación</div>
+            <div class="guia-etapa-desc">Crédito aprobado. Se genera la factura y se prepara la unidad para entrega.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--entrega">
+            <div class="guia-etapa-name">🚚 En proceso de entrega</div>
+            <div class="guia-etapa-desc">La moto está lista. Se coordina fecha y lugar de entrega con el cliente.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--ganado">
+            <div class="guia-etapa-name">✅ Post Venta</div>
+            <div class="guia-etapa-desc">Venta concretada. Se da seguimiento para fidelización, servicio y referidos.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--estancado">
+            <div class="guia-etapa-name">⚠️ Estancados / Cambio de estrategia</div>
+            <div class="guia-etapa-desc">Lead que dejó de avanzar. Requiere una nueva táctica: precio, modelo alternativo o seguimiento diferente.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--perdido">
+            <div class="guia-etapa-name">❌ Venta perdida</div>
+            <div class="guia-etapa-desc">El cliente no compró. Registrar correctamente permite analizar causas y mejorar conversión.</div>
+          </div>
+        </div>
+
+        <div class="guia-tip">
+          <span class="guia-tip-icon">💡</span>
+          <div><strong>Control del gerente:</strong> Cada vez que un asesor mueve un lead de etapa, el tablero se actualiza al instante. Esto permite al gerente detectar dónde se estancan más leads, qué asesor tiene más casos en nutrición y cuánto valor hay en cada columna del pipeline.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ GUÍA: VENTA EMPRESA ═══════════════════ -->
+  <div class="screen" id="screen-guia-empresa">
+    <header class="area-header area-header--guias">
+      <button class="back-btn" data-target="guias">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>Guías
+      </button>
+      <div class="header-info">
+        <span class="header-icon">🏢</span>
+        <div><div class="header-area">Guía Rápida</div><h2>Venta Empresa</h2></div>
+      </div>
+    </header>
+    <div class="tab-panels">
+      <div class="guia-body">
+
+        <!-- ★ BLOQUE PRINCIPAL: REGISTRO EMPRESA ★ -->
+        <div class="guia-venta-hero guia-venta-hero--empresa">
+          <div class="guia-venta-hero-badge" style="background:linear-gradient(90deg,#818cf8,#a78bfa);color:#fff">🏢 VENTA EMPRESAS</div>
+          <div class="guia-venta-hero-title">Registra la venta empresarial correctamente</div>
+          <div class="guia-venta-hero-sub">Las ventas a personas morales usan <strong>campos distintos</strong> a la venta individual. Llenarlos completos es obligatorio para que el gerente contabilice la venta y calcule tu comisión.</div>
+          <div class="guia-venta-hero-body">
+            <div class="guia-img-wrap" style="padding:0 0 12px">
+              <img src="img/crm-emp-1.png" alt="Panel de registro de venta empresa con monto y Venta Empresas" class="guia-img" style="max-width:280px;margin:0 auto;display:block;border-radius:10px">
+            </div>
+            <div class="guia-campos-list">
+              <div class="guia-campo-item guia-campo--etapa">
+                <div class="guia-campo-label">1. Etapa de la Venta (Empresa)</div>
+                <div class="guia-campo-val">→ Mueve a <strong>"Post Venta"</strong> al cerrar</div>
+                <div class="guia-campo-why">Usa siempre el campo de empresa, no el de venta individual. Son campos separados en el CRM.</div>
+              </div>
+              <div class="guia-campo-item guia-campo--monto">
+                <div class="guia-campo-label">2. Cantidad Facturada (Empresa)</div>
+                <div class="guia-campo-val">→ Escribe el monto total de la flotilla <span class="guia-campo-ej">ej. MXN 317,520</span></div>
+                <div class="guia-campo-why">Este monto suele ser mayor al individual ya que cubre múltiples unidades. Es la base del reporte de comisión empresarial.</div>
+              </div>
+              <div class="guia-campo-item guia-campo--venta" style="border-color:#a78bfa;background:rgba(167,139,250,0.08)">
+                <div class="guia-campo-label">3. Marcar "Venta Empresas"</div>
+                <div class="guia-campo-val">→ Activa el campo <strong>💲 VENTA EMPRESAS VENTA 💲</strong></div>
+                <div class="guia-campo-why">Sin este campo marcado la venta empresarial no aparece en los reportes de cierre aunque el monto esté capturado.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="guia-intro">
+          <p>La venta a empresas tiene su propio pipeline con <strong>7 etapas</strong>. Los montos son más altos y los ciclos de venta más largos, por eso el seguimiento puntual en cada etapa es aún más crítico.</p>
+        </div>
+
+        <!-- SELECTOR DE ETAPA EMPRESA -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num" style="background:linear-gradient(135deg,#6d28d9,#a78bfa)">🎯</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">Etapas de la Venta (Empresa)</div>
+              <div class="guia-step-desc">El campo <strong>"Etapa de la Venta (Empresa)"</strong> tiene su propia lista desplegable, diferente a la venta individual. Asegúrate de usar siempre el campo correcto.</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap" style="display:flex;justify-content:center">
+            <img src="img/crm-emp-2.png" alt="Dropdown de etapas de la venta empresa" class="guia-img" style="max-width:260px;width:100%">
+          </div>
+        </div>
+
+        <!-- ETAPAS EMPRESA -->
+        <div class="guia-etapas-grid">
+          <div class="guia-etapa-card guia-etapa--nutri">
+            <div class="guia-etapa-name">📚 Nutrición primera etapa</div>
+            <div class="guia-etapa-desc">Primer contacto con la empresa. Se identifican necesidades, número de unidades y tomador de decisiones.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--nutri">
+            <div class="guia-etapa-name">📅 Casi listo para agendar</div>
+            <div class="guia-etapa-desc">La empresa está interesada. Se coordina cita para presentación de propuesta o prueba de unidad.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--credito">
+            <div class="guia-etapa-name">🧾 Facturación</div>
+            <div class="guia-etapa-desc">Propuesta aceptada. Se generan facturas, documentación fiscal (RFC) y contratos empresariales.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--entrega">
+            <div class="guia-etapa-name">🚚 Entrega</div>
+            <div class="guia-etapa-desc">Unidades listas. Se coordina la entrega de la flotilla al cliente empresarial.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--ganado">
+            <div class="guia-etapa-name">✅ Post Venta</div>
+            <div class="guia-etapa-desc">Venta cerrada. Seguimiento para fidelización, mantenimientos futuros y referidos corporativos.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--estancado">
+            <div class="guia-etapa-name">⚠️ Estancado / Cambio de estrategia</div>
+            <div class="guia-etapa-desc">Negociación parada. Se revisa propuesta económica, modelos alternativos o involucrar al gerente.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--perdido" style="grid-column:1/-1">
+            <div class="guia-etapa-name">❌ Venta Perdida</div>
+            <div class="guia-etapa-desc">La empresa no concretó. Registrarlo correctamente permite identificar patrones y mejorar propuestas futuras.</div>
+          </div>
+        </div>
+
+        <div class="guia-tip">
+          <span class="guia-tip-icon">💡</span>
+          <div><strong>Diferencia clave:</strong> La venta empresa tiene campos y pipeline <em>separados</em> de la venta individual. Un lead puede tener activas ambas negociaciones al mismo tiempo si el cliente compra moto personal y también gestiona una flotilla para su empresa.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ GUÍA: SERVICIO ═══════════════════ -->
+  <div class="screen" id="screen-guia-servicio">
+    <header class="area-header area-header--guias">
+      <button class="back-btn" data-target="guias">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>Guías
+      </button>
+      <div class="header-info">
+        <span class="header-icon">🔧</span>
+        <div><div class="header-area">Guía Rápida</div><h2>Servicio al Taller</h2></div>
+      </div>
+    </header>
+    <div class="tab-panels">
+      <div class="guia-body">
+
+        <!-- ★ BLOQUE PRINCIPAL: CIERRE DE SERVICIO ★ -->
+        <div class="guia-venta-hero guia-venta-hero--servicio">
+          <div class="guia-venta-hero-badge" style="background:linear-gradient(90deg,#0ea5e9,#38bdf8);color:#000">🔧 CIERRE DE ORDEN</div>
+          <div class="guia-venta-hero-title">Registra el servicio correctamente</div>
+          <div class="guia-venta-hero-sub">Al terminar el trabajo en taller, <strong>tres campos son obligatorios</strong> para que la orden quede cerrada en el sistema y el gerente la contabilice.</div>
+          <div class="guia-venta-hero-body">
+            <div class="guia-img-wrap" style="padding:0 0 12px">
+              <img src="img/crm-svc-1.png" alt="Panel de cierre de servicio con total y Servicio Realizado" class="guia-img" style="max-width:280px;margin:0 auto;display:block;border-radius:10px">
+            </div>
+            <div class="guia-campos-list">
+              <div class="guia-campo-item guia-campo--etapa">
+                <div class="guia-campo-label">1. Estación actual</div>
+                <div class="guia-campo-val">→ Mueve a <strong>"Entregado / Facturado"</strong> al terminar</div>
+                <div class="guia-campo-why">Actualiza la posición de la unidad en el tablero de taller para que el gerente vea el estatus en tiempo real.</div>
+              </div>
+              <div class="guia-campo-item guia-campo--monto">
+                <div class="guia-campo-label">2. Total del servicio</div>
+                <div class="guia-campo-val">→ Captura el monto cobrado <span class="guia-campo-ej">ej. MXN 1,310</span></div>
+                <div class="guia-campo-why">Este importe alimenta los reportes de ingresos del taller. Sin el monto, la orden no aparece en el cierre de caja del día.</div>
+              </div>
+              <div class="guia-campo-item" style="border-left:4px solid #22d3ee;background:rgba(34,211,238,0.08)">
+                <div class="guia-campo-label">3. Marcar "Servicio Realizado"</div>
+                <div class="guia-campo-val">→ Activa el campo <strong>🏅 SERVICIO REALIZADO 🏅</strong></div>
+                <div class="guia-campo-why">Confirma en el sistema que la orden fue completada. Sin este marcador, la orden permanece abierta aunque el cliente ya retiró su moto.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ESTACIONES -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">🚉</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">Estación actual de la unidad</div>
+              <div class="guia-step-desc">El campo <strong>"Estación actual"</strong> mueve la tarjeta de la moto entre las columnas del tablero de taller. Actualízalo cada vez que la unidad cambie de fase para que todo el equipo vea dónde está.</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap" style="display:flex;justify-content:center">
+            <img src="img/crm-svc-2.png" alt="Dropdown de estaciones del taller" class="guia-img" style="max-width:260px;width:100%">
+          </div>
+        </div>
+
+        <!-- ESTACIONES GRID -->
+        <div class="guia-etapas-grid">
+          <div class="guia-etapa-card guia-etapa--lead">
+            <div class="guia-etapa-name">📅 Cita Agendada</div>
+            <div class="guia-etapa-desc">El cliente apartó su lugar. Aún no ha llegado al taller.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--nutri">
+            <div class="guia-etapa-name">🛬 En Recepción</div>
+            <div class="guia-etapa-desc">La moto llegó al taller. Se capturan los datos, kilometraje y el diagnóstico inicial.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--estancado">
+            <div class="guia-etapa-name">⏳ Esperando autorización</div>
+            <div class="guia-etapa-desc">Se envió cotización al cliente. La reparación no inicia hasta tener su aprobación.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--estancado">
+            <div class="guia-etapa-name">🔩 Esperando refacciones</div>
+            <div class="guia-etapa-desc">Autorización recibida. Se está surtiendo la pieza necesaria para continuar.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--perfil">
+            <div class="guia-etapa-name">🔨 En reparación</div>
+            <div class="guia-etapa-desc">El técnico está trabajando activamente en la unidad.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--credito">
+            <div class="guia-etapa-name">✔️ Listo para entrega</div>
+            <div class="guia-etapa-desc">Reparación terminada. Se avisa al cliente que puede pasar a recoger su moto.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--ganado">
+            <div class="guia-etapa-name">🧾 Entregado / Facturado</div>
+            <div class="guia-etapa-desc">El cliente recogió su moto y se generó la factura. Orden lista para cerrar.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--ganado">
+            <div class="guia-etapa-name">💬 Post Venta</div>
+            <div class="guia-etapa-desc">Seguimiento posterior: verificar satisfacción, recordar próximo servicio y solicitar encuesta.</div>
+          </div>
+        </div>
+
+        <!-- ★ ENCUESTA ★ -->
+        <div class="guia-encuesta-block">
+          <div class="guia-encuesta-header">
+            <span class="guia-encuesta-icon">⭐</span>
+            <div>
+              <div class="guia-encuesta-title">Encuesta de satisfacción Honda</div>
+              <div class="guia-encuesta-sub">Paso clave después de entregar la unidad</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap" style="padding:0 0 12px">
+            <img src="img/crm-svc-3.png" alt="Campo Link de encuesta con URL de Honda" class="guia-img" style="max-width:340px;margin:0 auto;display:block;border-radius:8px">
+          </div>
+          <ol class="guia-encuesta-pasos">
+            <li>
+              <strong>Cuando el sistema te notifique que llegó la encuesta al cliente</strong>, copia el link personalizado de la encuesta Honda.
+            </li>
+            <li>
+              Pégalo en el campo <strong>"Link de encuesta"</strong> dentro del contacto del cliente en el CRM.
+            </li>
+            <li>
+              Presiona <strong>Guardar</strong>. El sistema enviará automáticamente una <strong>plantilla de WhatsApp</strong> al cliente solicitándole que llene la encuesta.
+            </li>
+          </ol>
+          <div class="guia-encuesta-tip">
+            <span>⚠️</span>
+            <span>Sin guardar el link, el mensaje de solicitud <strong>no se envía</strong>. Este paso es clave para mantener el puntaje de satisfacción del concesionario.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ GUÍA: REFACCIONES ═══════════════════ -->
+  <div class="screen" id="screen-guia-refacciones">
+    <header class="area-header area-header--guias">
+      <button class="back-btn" data-target="guias">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>Guías
+      </button>
+      <div class="header-info">
+        <span class="header-icon">🔩</span>
+        <div><div class="header-area">Guía Rápida</div><h2>Refacciones</h2></div>
+      </div>
+    </header>
+    <div class="tab-panels">
+      <div class="guia-body">
+
+        <!-- ★ BLOQUE PRINCIPAL: CIERRE DE REFACCIÓN ★ -->
+        <div class="guia-venta-hero guia-venta-hero--refacciones">
+          <div class="guia-venta-hero-badge" style="background:linear-gradient(90deg,#f97316,#fb923c);color:#000">🔩 CIERRE DE REFACCIÓN</div>
+          <div class="guia-venta-hero-title">Registra la venta de refacción correctamente</div>
+          <div class="guia-venta-hero-sub">Al entregar una pieza al cliente, <strong>dos campos son obligatorios</strong> para que la venta quede registrada y se refleje en el corte del día.</div>
+          <div class="guia-venta-hero-body">
+            <div class="guia-img-wrap" style="padding:0 0 12px">
+              <img src="img/crm-ref-1.png" alt="Panel de cierre de refacción con costo y Refacción Vendida" class="guia-img" style="max-width:280px;margin:0 auto;display:block;border-radius:10px">
+            </div>
+            <div class="guia-campos-list">
+              <div class="guia-campo-item guia-campo--monto">
+                <div class="guia-campo-label">1. Costo de refacciones</div>
+                <div class="guia-campo-val">→ Escribe el precio total cobrado <span class="guia-campo-ej">ej. MXN 410</span></div>
+                <div class="guia-campo-why">Este monto alimenta el reporte de ingresos de refacciones. Sin el costo, la pieza no aparece en el corte de caja.</div>
+              </div>
+              <div class="guia-campo-item" style="border-left:4px solid #f97316;background:rgba(249,115,22,0.08)">
+                <div class="guia-campo-label">2. Marcar "Refacción Vendida"</div>
+                <div class="guia-campo-val">→ Activa el campo <strong>🏅 REFACCIÓN VENDIDA 🏅</strong></div>
+                <div class="guia-campo-why">Confirma que la pieza fue entregada y cobrada. Sin marcarlo el registro permanece abierto y no se contabiliza en los reportes del gerente.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="guia-intro">
+          <p>Cada lead de refacciones avanza por <strong>6 secciones</strong>. Mover la tarjeta a la sección correcta permite al gerente saber cuántas piezas están en pedido, cuántas ya llegaron a sucursal y cuántas se entregaron.</p>
+        </div>
+
+        <!-- SELECTOR SECCIÓN -->
+        <div class="guia-step">
+          <div class="guia-step-header">
+            <span class="guia-step-num" style="background:linear-gradient(135deg,#c2410c,#f97316)">📦</span>
+            <div class="guia-step-info">
+              <div class="guia-step-title">Sección actual de la pieza</div>
+              <div class="guia-step-desc">El campo <strong>"Sección"</strong> mueve la tarjeta entre columnas del tablero de refacciones. Actualízalo en cada paso del proceso para tener trazabilidad completa del pedido.</div>
+            </div>
+          </div>
+          <div class="guia-img-wrap" style="display:flex;justify-content:center">
+            <img src="img/crm-ref-2.png" alt="Dropdown de secciones de refacciones" class="guia-img" style="max-width:260px;width:100%">
+          </div>
+        </div>
+
+        <!-- SECCIONES GRID -->
+        <div class="guia-etapas-grid">
+          <div class="guia-etapa-card guia-etapa--lead">
+            <div class="guia-etapa-name">📝 En cotización</div>
+            <div class="guia-etapa-desc">El cliente solicitó la pieza. Se está revisando disponibilidad y precio antes de confirmar el pedido.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--nutri">
+            <div class="guia-etapa-name">📤 Pedido a HDM</div>
+            <div class="guia-etapa-desc">Cotización aceptada. La pieza fue solicitada al distribuidor Honda de México. En espera de llegada.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--credito">
+            <div class="guia-etapa-name">🏪 Refacción en sucursal</div>
+            <div class="guia-etapa-desc">La pieza llegó al concesionario. Se avisa al cliente que ya puede pasar a recogerla o instalarla.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--ganado">
+            <div class="guia-etapa-name">✅ Entregado / Facturado</div>
+            <div class="guia-etapa-desc">La pieza fue entregada al cliente y se generó la factura. Registra el costo y marca Refacción Vendida.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--perfil">
+            <div class="guia-etapa-name">🔁 Pedido recurrente</div>
+            <div class="guia-etapa-desc">El cliente solicita esta pieza de forma periódica. Mantén el contacto activo para anticipar futuros pedidos.</div>
+          </div>
+          <div class="guia-etapa-card guia-etapa--perdido">
+            <div class="guia-etapa-name">❌ Prospecto perdido</div>
+            <div class="guia-etapa-desc">El cliente no concretó la compra. Registra el motivo para mejorar la respuesta en futuros casos similares.</div>
+          </div>
+        </div>
+
+        <div class="guia-tip">
+          <span class="guia-tip-icon">💡</span>
+          <div><strong>Control del gerente:</strong> El tablero de refacciones muestra en tiempo real cuántas piezas están en cada etapa. Un lead atascado en <em>Pedido a HDM</em> por varios días puede significar un problema de surtido que requiere atención.</div>
+        </div>
+
+      </div>
     </div>
   </div>
 

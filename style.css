@@ -916,3 +916,317 @@ img    { max-width: 100%; }
   .home-main { padding: 20px 40px 48px; }
   .home-hero { padding-bottom: 40px; }
 }
+
+/* ─── GUÍAS RÁPIDAS ─────────────────────────── */
+.area-header--guias { background: linear-gradient(90deg, #00141a 0%, var(--bg2) 100%); }
+
+.guias-home-btn {
+  border-color: rgba(0,195,255,0.2) !important;
+  margin-top: 10px;
+}
+.guias-home-btn:hover { border-color: rgba(0,195,255,0.4) !important; }
+.guias-home-btn .manual-home-icon { font-size: 2rem; }
+.guias-home-btn .manual-home-title { color: #4dd6f0; }
+
+.guia-body {
+  padding: 16px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.guia-intro {
+  background: rgba(0,195,255,0.07);
+  border: 1px solid rgba(0,195,255,0.2);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+}
+.guia-intro strong { color: var(--text); }
+
+.guia-step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.guia-step:hover { border-color: rgba(0,195,255,0.3); }
+
+.guia-step-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 16px 12px;
+}
+
+.guia-step-num {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0090b8, #00c3ff);
+  color: #000;
+  font-size: 1rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(0,195,255,0.35);
+}
+
+.guia-step-info { flex: 1; }
+
+.guia-step-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.guia-step-desc {
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  line-height: 1.55;
+}
+.guia-step-desc strong { color: var(--text); }
+.guia-step-desc em { color: #8ecbe0; font-style: normal; }
+
+.guia-img-wrap {
+  padding: 0 12px 14px;
+}
+
+.guia-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.guia-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(245,166,35,0.08);
+  border: 1px solid rgba(245,166,35,0.2);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 0.84rem;
+  color: var(--text-sec);
+  line-height: 1.55;
+}
+.guia-tip strong { color: var(--warning); }
+.guia-tip em { color: var(--text); font-style: normal; }
+.guia-tip-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 1px; }
+
+/* ─── VENTA HERO BLOCK ──────────────────────── */
+.guia-venta-hero {
+  background: linear-gradient(135deg, rgba(74,222,128,0.07) 0%, rgba(245,158,11,0.07) 100%);
+  border: 2px solid rgba(74,222,128,0.35);
+  border-radius: 16px;
+  padding: 18px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.guia-venta-hero-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  color: #000;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+
+.guia-venta-hero-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.guia-venta-hero-sub {
+  font-size: 0.85rem;
+  color: var(--text-sec);
+  line-height: 1.55;
+  margin-top: -6px;
+}
+.guia-venta-hero-sub strong { color: #f87171; }
+
+.guia-venta-hero-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guia-campos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.guia-campo-item {
+  border-radius: 10px;
+  padding: 11px 13px;
+  border-left: 4px solid transparent;
+}
+
+.guia-campo-label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.guia-campo-val {
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  margin-bottom: 4px;
+}
+.guia-campo-val strong { color: var(--text); }
+
+.guia-campo-ej {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+
+.guia-campo-why {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  line-height: 1.45;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.guia-campo--etapa   { border-color: #38bdf8; background: rgba(56,189,248,0.07); }
+.guia-campo--monto   { border-color: #f59e0b; background: rgba(245,158,11,0.07); }
+.guia-campo--venta   { border-color: #4ade80; background: rgba(74,222,128,0.08); }
+.guia-campo--venta .guia-campo-val strong { color: #4ade80; }
+
+/* ─── ETAPAS GRID ───────────────────────────── */
+.guia-etapas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.guia-etapa-card {
+  border-radius: 10px;
+  padding: 12px 14px;
+  border-left: 4px solid transparent;
+  background: var(--surface);
+}
+
+.guia-etapa-name {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.guia-etapa-desc {
+  font-size: 0.79rem;
+  color: var(--text-sec);
+  line-height: 1.5;
+}
+
+.guia-etapa--lead     { border-color: #5b8aff; background: rgba(91,138,255,0.07); }
+.guia-etapa--perfil   { border-color: #a78bfa; background: rgba(167,139,250,0.07); }
+.guia-etapa--nutri    { border-color: #38bdf8; background: rgba(56,189,248,0.07); }
+.guia-etapa--credito  { border-color: #f59e0b; background: rgba(245,158,11,0.07); }
+.guia-etapa--entrega  { border-color: #fb923c; background: rgba(251,146,60,0.07); }
+.guia-etapa--ganado   { border-color: #4ade80; background: rgba(74,222,128,0.08); }
+.guia-etapa--estancado{ border-color: #facc15; background: rgba(250,204,21,0.07); }
+.guia-etapa--perdido  { border-color: #f87171; background: rgba(248,113,113,0.07); }
+
+@media (min-width: 600px) {
+  .guia-etapas-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ─── ENCUESTA BLOCK ────────────────────────── */
+.guia-encuesta-block {
+  background: linear-gradient(135deg, rgba(250,204,21,0.07) 0%, rgba(251,146,60,0.07) 100%);
+  border: 2px solid rgba(250,204,21,0.35);
+  border-radius: 16px;
+  padding: 18px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.guia-encuesta-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.guia-encuesta-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.guia-encuesta-title {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.guia-encuesta-sub {
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  margin-top: 2px;
+}
+
+.guia-encuesta-pasos {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.guia-encuesta-pasos li {
+  font-size: 0.84rem;
+  color: var(--text-sec);
+  line-height: 1.55;
+}
+
+.guia-encuesta-pasos li strong {
+  color: var(--text);
+}
+
+.guia-encuesta-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: rgba(248,113,113,0.08);
+  border: 1px solid rgba(248,113,113,0.25);
+  border-radius: 10px;
+  padding: 10px 13px;
+  font-size: 0.81rem;
+  color: var(--text-sec);
+  line-height: 1.5;
+}
+
+.guia-encuesta-tip strong { color: #f87171; }
+
+.guia-venta-hero--servicio {
+  background: linear-gradient(135deg, rgba(14,165,233,0.07) 0%, rgba(56,189,248,0.05) 100%);
+  border-color: rgba(14,165,233,0.35);
+}
+
+.guia-venta-hero--refacciones {
+  background: linear-gradient(135deg, rgba(249,115,22,0.07) 0%, rgba(251,146,60,0.05) 100%);
+  border-color: rgba(249,115,22,0.35);
+}
