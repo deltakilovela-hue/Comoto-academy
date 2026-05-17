@@ -383,40 +383,32 @@ const EJERCICIOS = {
         exp: 'La barra inferior tiene todos los atajos: 😊 emojis · 📎 adjuntos · 🎙️ notas de voz · ⚡ fragmentos · plantillas WA y más.'
       },
       {
-        q: '¿Qué defines en este campo del Mando de Control?',
-        crop: { x: 1513, y: 346, w: 413, h: 78 },
+        q: '¿Qué tres acciones puedes realizar desde el "Mando de control"?',
+        imagen: 'img/crm-mando-control.png',
+        imgW: 351,
+        crop: { x: 0, y: 0, w: 351, h: 242 },
         opciones: [
-          'El nombre del asesor responsable del lead',
-          'La sucursal Honda que recibirá y atenderá al cliente',
-          'El área a la que se redirige (Ventas, Servicio, Refacciones)',
-          'Si el chatbot sigue activo en la conversación'
+          'Ver el historial, escribir un mensaje y adjuntar archivos',
+          'Asignar sucursal, redirigir al equipo y dejar comentario al gerente',
+          'Enviar plantillas de WhatsApp, emojis y notas de voz',
+          'Activar el chatbot, cambiar el canal y ver reportes'
         ],
         ans: 1,
-        exp: '"Sucursal a asignar" es el primer campo del Mando de Control — seleccionas la sucursal que atenderá al cliente (ej. Guadalajara).'
+        exp: 'El "Mando de control" tiene tres campos clave: "Sucursal a asignar" (qué sucursal atiende), "Redirigir al equipo" (Ventas/Servicio/Refacciones) y "Comentario a Gerente" (nota interna).'
       },
       {
-        q: '¿Para qué usas este campo en el Mando de Control?',
-        crop: { x: 1513, y: 428, w: 413, h: 68 },
+        q: '¿Qué indica el indicador rojo "-16d" o "-24d" junto a un contacto en tu bandeja?',
+        imagen: 'img/crm-inbox.png',
+        imgW: 404,
+        crop: { x: 0, y: 430, w: 404, h: 229 },
         opciones: [
-          'Elegir la sucursal que atenderá el lead',
-          'Activar o desactivar el chatbot automático',
-          'Elegir el área que recibirá el lead: Ventas, Servicio o Refacciones',
-          'Agregar una nota visible para el cliente'
+          'El lead tiene 16 o 24 mensajes sin responder',
+          'El lead lleva 16 o 24 días sin recibir respuesta de tu parte',
+          'El sistema bloqueó al contacto por 16 o 24 horas',
+          'El lead fue atendido hace 16 o 24 días y ya está cerrado'
         ],
-        ans: 2,
-        exp: '"Redirigir al equipo" define qué área recibirá el lead. Asegúrate de combinarlo con la sucursal correcta antes de guardar.'
-      },
-      {
-        q: '¿Qué controla este campo del Mando de Control?',
-        crop: { x: 1513, y: 493, w: 413, h: 68 },
-        opciones: [
-          'El canal de envío de mensajes (WhatsApp o email)',
-          'La sucursal asignada al lead',
-          'El tipo de plantilla de activación a usar',
-          'Si el asistente virtual sigue respondiendo en esa conversación'
-        ],
-        ans: 3,
-        exp: 'El campo "Chatbot" controla si el asistente virtual sigue activo. Desactívalo cuando vayas a tomar el control manualmente.'
+        ans: 1,
+        exp: 'El badge rojo indica los días de inactividad — cuántos días lleva ese lead sin recibir una respuesta. Es una alerta de seguimiento pendiente: entre más días, más urgente atenderlo.'
       }
     ]
   },
@@ -504,10 +496,13 @@ function renderEjPregunta(id) {
 
   // Responsive crop via CSS:
   // padding-top trick keeps aspect ratio; image is shifted so only the crop region shows.
+  // Each question can override imagen/imgW with its own p.imagen / p.imgW.
+  const imgSrc   = p.imagen || ej.imagen;
+  const imgW     = p.imgW   || ej.imgW;
   const padPct   = (c.h / c.w * 100).toFixed(2);
   const imgLeft  = (-c.x / c.w * 100).toFixed(2);
   const imgTop   = (-c.y / c.h * 100).toFixed(2);
-  const imgWidth = (ej.imgW / c.w * 100).toFixed(2);
+  const imgWidth = (imgW / c.w * 100).toFixed(2);
 
   const optsHTML = p.opciones.map((opt, i) =>
     `<button class="quiz-option" onclick="pickEjAnswer('${id}',${i})">${opt}</button>`
@@ -523,7 +518,7 @@ function renderEjPregunta(id) {
       <div style="position:relative;overflow:hidden;padding-top:${padPct}%;
                   border-radius:10px;border:1.5px solid rgba(255,255,255,0.13);
                   margin:18px 0 22px;background:#0d0d0d;box-shadow:0 4px 24px rgba(0,0,0,0.4)">
-        <img src="${ej.imagen}"
+        <img src="${imgSrc}"
              style="position:absolute;top:${imgTop}%;left:${imgLeft}%;
                     width:${imgWidth}%;max-width:none;height:auto;display:block;pointer-events:none;"
              alt="Sección del CRM" draggable="false">
