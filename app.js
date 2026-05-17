@@ -468,6 +468,67 @@ const EJERCICIOS = {
       }
     ]
   }
+  ,
+
+  ventas: {
+    titulo: 'Cierre de Venta',
+    imagen: 'img/crm-ventas-1.png',
+    imgW: 340,
+    preguntas: [
+      {
+        q: '¿Cuál es el primer dato que debes registrar al abrir el formulario de "Datos de Venta Individual"?',
+        crop: { x: 0, y: 0, w: 340, h: 300 },
+        opciones: [
+          'Selecciona la moto',
+          'Fecha oficial de compra',
+          'Método de pago',
+          'R.F.C.'
+        ],
+        ans: 1,
+        exp: '"Fecha oficial de compra" es el primer campo — registra la fecha exacta en que se concreta la venta, no la de entrega.'
+      },
+      {
+        q: '¿Qué archivo debes adjuntar en el campo "RFC scan"?',
+        crop: { x: 0, y: 395, w: 340, h: 184 },
+        opciones: [
+          'La foto de la moto a entregar',
+          'El contrato de venta firmado',
+          'El RFC del cliente en PDF, JPEG o JPG',
+          'El comprobante de pago del enganche'
+        ],
+        ans: 2,
+        exp: 'El campo "RFC scan" acepta el RFC del cliente en formato PDF, JPEG o JPG. Es obligatorio para generar la factura correctamente.'
+      },
+      {
+        q: '¿En qué campo registras el monto total cobrado al cliente por la moto?',
+        imagen: 'img/crm-ventas-2.png',
+        imgW: 351,
+        crop: { x: 0, y: 0, w: 351, h: 306 },
+        opciones: [
+          'Modelo de interés',
+          'Notas de asesor',
+          'Etapa de la venta',
+          'Cantidad facturada'
+        ],
+        ans: 3,
+        exp: '"Cantidad facturada" es donde capturas el precio total de la operación. Asegúrate de que coincida con el monto del contrato.'
+      },
+      {
+        q: '¿En qué etapa colocas el lead cuando el cliente ya recibió su moto y la venta está cerrada?',
+        imagen: 'img/crm-ventas-3.png',
+        imgW: 343,
+        crop: { x: 0, y: 0, w: 343, h: 306 },
+        opciones: [
+          'En proceso de entrega',
+          'Facturación',
+          'Post Venta',
+          'Trámite de crédito'
+        ],
+        ans: 2,
+        exp: '"Post Venta" se usa una vez que el cliente ya recibió su moto. Es la etapa final del proceso y sirve para dar seguimiento a satisfacción y referidos.'
+      }
+    ]
+  }
 };
 
 const ejState = {};
