@@ -470,6 +470,144 @@ const EJERCICIOS = {
   }
   ,
 
+  servicio: {
+    titulo: 'Servicio al Taller',
+    imagen: 'img/crm-servicio-1.png',
+    imgW: 346,
+    preguntas: [
+      {
+        q: '¿Qué dato registras en "Kilometraje actual" al recibir la moto?',
+        crop: { x: 0, y: 0, w: 346, h: 200 },
+        opciones: [
+          'El número de servicio anterior de la moto',
+          'Los kilómetros que tiene la moto en el momento de la recepción',
+          'El costo estimado del servicio a realizar',
+          'La fecha de la última revisión en agencia'
+        ],
+        ans: 1,
+        exp: '"Kilometraje actual" registra los km exactos que tiene la moto al momento de ingresarla al taller. Es clave para el historial y para recomendar el tipo de servicio.'
+      },
+      {
+        q: '¿Para qué sirve el campo "NIV o VIN" en el formulario de Servicio?',
+        crop: { x: 0, y: 170, w: 346, h: 140 },
+        opciones: [
+          'Para registrar el número de motor del cliente',
+          'Para ingresar el código de la refacción a cambiar',
+          'Para identificar de manera única la moto del cliente en el sistema',
+          'Para registrar el número de factura del servicio anterior'
+        ],
+        ans: 2,
+        exp: 'El NIV (Número de Identificación Vehicular) o VIN es el código único de la moto — como su CURP. Permite rastrear el historial completo del vehículo en el sistema.'
+      },
+      {
+        q: '¿Qué registras en el campo "Historial de servicios adquiridos"?',
+        crop: { x: 0, y: 270, w: 346, h: 145 },
+        opciones: [
+          'Los datos del asesor que atiende el servicio',
+          'Los servicios previos que la moto ha tenido en la agencia',
+          'El número de refacciones disponibles en almacén',
+          'Las promociones activas del mes'
+        ],
+        ans: 1,
+        exp: '"Historial de servicios adquiridos" te permite ver y registrar qué servicios previos ha tenido la moto en agencia. Úsalo para identificar patrones y dar un diagnóstico más preciso.'
+      },
+      {
+        q: '¿Qué campo llenas con la fecha y hora exacta en que el cliente dejó su moto en el taller?',
+        crop: { x: 0, y: 385, w: 346, h: 125 },
+        opciones: [
+          'Estación actual',
+          'Notas... Etc.',
+          'Historial de servicios adquiridos',
+          'Recepción de servicio'
+        ],
+        ans: 3,
+        exp: '"Recepción de servicio" registra el timestamp de entrada de la moto al taller. Es el punto de inicio oficial de la orden de servicio.'
+      },
+      {
+        q: '¿Qué envías al cliente a través del campo "Link de encuesta"?',
+        crop: { x: 0, y: 490, w: 346, h: 204 },
+        opciones: [
+          'Un enlace para ver el catálogo de refacciones disponibles',
+          'El comprobante de pago del servicio',
+          'Un enlace para que el cliente califique la atención recibida',
+          'La dirección del taller para recoger la moto'
+        ],
+        ans: 2,
+        exp: 'El "Link de encuesta" lleva al cliente a una encuesta de satisfacción. Envíalo una vez entregada la moto para medir la experiencia y detectar áreas de mejora.'
+      },
+      {
+        q: '¿Qué campos completas al momento de cerrar y facturar una orden de servicio?',
+        imagen: 'img/crm-servicio-2.png',
+        imgW: 333,
+        crop: { x: 0, y: 0, w: 333, h: 173 },
+        opciones: [
+          'Modelo y Año modelo de la moto',
+          'NIV o VIN y No. placa',
+          'Hora y Día de servicio',
+          'Kilometraje actual y Link de encuesta'
+        ],
+        ans: 2,
+        exp: 'Al cerrar la orden activas "SERVICIO REALIZADO" y capturas la "Hora" y el "Día de servicio" — esto sella la conclusión del servicio y queda en el historial del cliente.'
+      },
+      {
+        q: '¿Qué indica el campo "SERVICIO REALIZADO" cuando está activado?',
+        imagen: 'img/crm-servicio-2.png',
+        imgW: 333,
+        crop: { x: 0, y: 0, w: 333, h: 173 },
+        opciones: [
+          'Que la moto entró al taller para diagnóstico inicial',
+          'Que el servicio fue completado y el cliente puede recoger su moto',
+          'Que el cliente pagó el servicio por adelantado',
+          'Que la moto está esperando refacciones'
+        ],
+        ans: 1,
+        exp: '"SERVICIO REALIZADO" es el cierre oficial de la orden de trabajo. Al activarlo confirmas que el técnico terminó el servicio y la moto está lista para entrega.'
+      },
+      {
+        q: '¿En qué estación colocas la moto mientras el técnico espera que el cliente autorice la reparación?',
+        imagen: 'img/crm-servicio-3.png',
+        imgW: 339,
+        crop: { x: 0, y: 0, w: 339, h: 293 },
+        opciones: [
+          'En Recepción',
+          'Esperando refacciones',
+          'Esperando autorización',
+          'En reparación'
+        ],
+        ans: 2,
+        exp: '"Esperando autorización" se usa cuando el diagnóstico está listo pero el cliente aún no ha aprobado el presupuesto o la reparación. No se avanza hasta tener su visto bueno.'
+      },
+      {
+        q: '¿Qué estación indica que el servicio ya terminó y la moto está lista para que el cliente la recoja?',
+        imagen: 'img/crm-servicio-3.png',
+        imgW: 339,
+        crop: { x: 0, y: 0, w: 339, h: 293 },
+        opciones: [
+          'Post Venta',
+          'En reparación',
+          'Entregado / Facturado',
+          'Listo para entrega'
+        ],
+        ans: 3,
+        exp: '"Listo para entrega" significa que el técnico terminó la reparación y la moto está limpia y lista. Pasa a "Entregado / Facturado" solo cuando el cliente ya pagó y se llevó su moto.'
+      },
+      {
+        q: '¿Qué estación usas cuando el técnico no puede continuar porque faltan piezas en el almacén?',
+        imagen: 'img/crm-servicio-3.png',
+        imgW: 339,
+        crop: { x: 0, y: 0, w: 339, h: 293 },
+        opciones: [
+          'Esperando autorización',
+          'Esperando refacciones',
+          'Estancado / Cambio de estrategia',
+          'Cita Agendada'
+        ],
+        ans: 1,
+        exp: '"Esperando refacciones" indica que el diagnóstico y la autorización ya están listos, pero la reparación no puede avanzar porque las piezas necesarias no están disponibles en ese momento.'
+      }
+    ]
+  },
+
   empresa: {
     titulo: 'Venta Empresa',
     imagen: 'img/crm-empresa-1.png',
