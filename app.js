@@ -423,26 +423,26 @@ const EJERCICIOS = {
 
   conv: {
     titulo: 'Panel de Conversaciones',
-    imagen: 'img/crm-conversaciones.png',
-    imgW: 1920,
+    imagen: 'img/crm-panel-derecho.png',
+    imgW: 361,
     preguntas: [
       {
-        q: '¿Desde qué sección del panel derecho redirigís el lead a otra área o sucursal?',
-        crop: { x: 1220, y: 348, w: 700, h: 48 },
+        q: '¿En qué sección del panel derecho redirigís el lead a otra área o sucursal?',
+        crop: { x: 0, y: 0, w: 361, h: 320 },
         opciones: [
           'Datos de Venta Individual',
-          'Mando de Control',
+          'Mando de control',
           'Refacciones',
           'Servicio'
         ],
         ans: 1,
-        exp: '"Mando de Control" te permite asignar sucursal, elegir el área (Ventas, Servicio, Refacciones) y activar o desactivar el chatbot.'
+        exp: '"Mando de control" te permite asignar sucursal, elegir el área (Ventas, Servicio, Refacciones) y activar o desactivar el chatbot.'
       },
       {
         q: '¿En qué sección llenarías el formulario para cerrar la venta de una moto?',
-        crop: { x: 1220, y: 418, w: 700, h: 48 },
+        crop: { x: 0, y: 0, w: 361, h: 320 },
         opciones: [
-          'Mando de Control',
+          'Mando de control',
           'Servicio',
           'Refacciones',
           'Datos de Venta Individual'
@@ -451,27 +451,27 @@ const EJERCICIOS = {
         exp: '"Datos de Venta Individual" es donde registras modelo, cantidad facturada, RFC y método de pago para cerrar la venta persona física.'
       },
       {
-        q: '¿Esta sección del panel derecho se usa cuando el cliente...?',
-        crop: { x: 1220, y: 518, w: 700, h: 48 },
+        q: '¿Qué sección usas cuando el cliente trae su moto al taller?',
+        crop: { x: 0, y: 0, w: 361, h: 320 },
         opciones: [
-          'Compra una moto nueva en la agencia',
-          'Trae su moto al taller para mantenimiento o reparación',
-          'Solicita una pieza o refacción Honda',
-          'Necesita ser redirigido a otra sucursal'
+          'Datos de Venta Individual',
+          'Refacciones',
+          'Servicio',
+          'Mando de control'
         ],
-        ans: 1,
+        ans: 2,
         exp: '"Servicio" es donde registras placa/VIN, fecha de recepción, link de encuesta y cierras la orden con "Servicio Realizado".'
       },
       {
-        q: '¿Qué tipo de transacción registras desde esta sección?',
-        crop: { x: 1220, y: 568, w: 700, h: 48 },
+        q: '¿En qué sección registras la venta de piezas o accesorios Honda?',
+        crop: { x: 0, y: 0, w: 361, h: 320 },
         opciones: [
-          'La venta de una moto nueva (modelo, precio, RFC)',
-          'La recepción de la moto en taller para servicio',
-          'La venta de piezas o accesorios Honda (pieza, VIN, precio)',
-          'El redireccionamiento del lead a otra área'
+          'Datos de Venta Individual',
+          'Servicio',
+          'Mando de control',
+          'Refacciones'
         ],
-        ans: 2,
+        ans: 3,
         exp: '"Refacciones" es donde ingresas el nombre de la pieza o código Honda, VIN, precio y cierras la transacción con "REFACCIÓN VENDIDA".'
       }
     ]
