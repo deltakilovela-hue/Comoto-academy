@@ -337,82 +337,144 @@ function renderResults(area) {
 // EJERCICIOS PRÁCTICOS (HOTSPOT)
 // ═══════════════════════════════════════════
 
+// ─── Crop coordinates reference: { x, y, w, h } in pixels of the original image ───
+// The CSS engine scales everything responsively — no zone calibration needed.
+
 const EJERCICIOS = {
   botones: {
     titulo: 'Botones de Conversación',
     imagen: 'img/crm-botones.png',
+    imgW: 1926,
     preguntas: [
       {
-        q: '¿Dónde eliges si tu respuesta va por <strong>WhatsApp</strong> al cliente o es un <strong>Comentario Interno</strong> solo para el equipo?',
-        zona: 'canal_selector',
-        exp: 'Los tabs "WhatsApp / Internal Comment" definen el destino del mensaje. WhatsApp llega al cliente; Internal Comment solo lo ven los asesores y gerencia.'
+        q: '¿Qué defines desde esta parte del CRM?',
+        crop: { x: 608, y: 686, w: 450, h: 52 },
+        opciones: [
+          'Si el mensaje va por WhatsApp al cliente o es un Comentario Interno del equipo',
+          'El texto del mensaje antes de enviarlo al cliente',
+          'Los íconos para adjuntar archivos y emojis',
+          'A qué sucursal se asigna el lead'
+        ],
+        ans: 0,
+        exp: 'Los tabs "WhatsApp / Internal Comment" definen el destino del mensaje. WhatsApp llega al cliente; Internal Comment solo lo ven asesores y gerencia.'
       },
       {
-        q: '¿Dónde <strong>escribes el mensaje</strong> antes de enviarlo al cliente?',
-        zona: 'input_mensaje',
+        q: '¿Qué acción realizas en esta área del CRM?',
+        crop: { x: 608, y: 738, w: 910, h: 90 },
+        opciones: [
+          'Seleccionar la plantilla de activación',
+          'Ver el historial de conversación del cliente',
+          'Redactar el mensaje que enviarás al cliente',
+          'Redirigir el lead a otra área o sucursal'
+        ],
+        ans: 2,
         exp: 'El campo "Type a message..." es donde redactas tu respuesta. Desde aquí también puedes programar el envío para después.'
       },
       {
-        q: '¿Dónde están los íconos para adjuntar archivos, emojis, notas de voz, fragmentos y plantillas?',
-        zona: 'toolbar_iconos',
+        q: '¿Para qué sirven estos íconos?',
+        crop: { x: 608, y: 846, w: 910, h: 62 },
+        opciones: [
+          'Navegar entre las secciones del menú lateral',
+          'Acceder a emojis, adjuntos, notas de voz, fragmentos y plantillas',
+          'Filtrar la bandeja de entrada por estado',
+          'Configurar notificaciones del sistema'
+        ],
+        ans: 1,
         exp: 'La barra inferior tiene todos los atajos: 😊 emojis · 📎 adjuntos · 🎙️ notas de voz · ⚡ fragmentos · plantillas WA y más.'
       },
       {
-        q: 'En el Mando de Control, ¿dónde defines a qué <strong>Sucursal</strong> se asigna el lead?',
-        zona: 'sucursal_campo',
-        exp: '"Sucursal a asignar" es el primer campo del Mando de Control — aquí seleccionas la sucursal que atenderá al cliente (ej. Guadalajara).'
+        q: '¿Qué defines en este campo del Mando de Control?',
+        crop: { x: 1513, y: 346, w: 413, h: 78 },
+        opciones: [
+          'El nombre del asesor responsable del lead',
+          'La sucursal Honda que recibirá y atenderá al cliente',
+          'El área a la que se redirige (Ventas, Servicio, Refacciones)',
+          'Si el chatbot sigue activo en la conversación'
+        ],
+        ans: 1,
+        exp: '"Sucursal a asignar" es el primer campo del Mando de Control — seleccionas la sucursal que atenderá al cliente (ej. Guadalajara).'
       },
       {
-        q: 'En el Mando de Control, ¿dónde seleccionas a qué <strong>equipo</strong> se redirige el lead (Ventas, Servicio, Refacciones)?',
-        zona: 'redirigir_campo',
+        q: '¿Para qué usas este campo en el Mando de Control?',
+        crop: { x: 1513, y: 428, w: 413, h: 68 },
+        opciones: [
+          'Elegir la sucursal que atenderá el lead',
+          'Activar o desactivar el chatbot automático',
+          'Elegir el área que recibirá el lead: Ventas, Servicio o Refacciones',
+          'Agregar una nota visible para el cliente'
+        ],
+        ans: 2,
         exp: '"Redirigir al equipo" define qué área recibirá el lead. Asegúrate de combinarlo con la sucursal correcta antes de guardar.'
       },
       {
-        q: 'En el Mando de Control, ¿dónde activas o desactivas el <strong>Chatbot</strong> para que responda cuando no estás disponible?',
-        zona: 'chatbot_campo',
-        exp: 'El campo "Chatbot" controla si el asistente virtual sigue activo en esa conversación. Desactívalo cuando vayas a tomar el control manualmente.'
+        q: '¿Qué controla este campo del Mando de Control?',
+        crop: { x: 1513, y: 493, w: 413, h: 68 },
+        opciones: [
+          'El canal de envío de mensajes (WhatsApp o email)',
+          'La sucursal asignada al lead',
+          'El tipo de plantilla de activación a usar',
+          'Si el asistente virtual sigue respondiendo en esa conversación'
+        ],
+        ans: 3,
+        exp: 'El campo "Chatbot" controla si el asistente virtual sigue activo. Desactívalo cuando vayas a tomar el control manualmente.'
       }
-    ],
-    zonas: {
-      canal_selector: { x: 32, y: 75, w: 22, h:  5 },
-      input_mensaje:  { x: 32, y: 80, w: 47, h: 12 },
-      toolbar_iconos: { x: 32, y: 92, w: 47, h:  6 },
-      sucursal_campo: { x: 79, y: 39, w: 21, h:  8 },
-      redirigir_campo:{ x: 79, y: 47, w: 21, h:  7 },
-      chatbot_campo:  { x: 79, y: 54, w: 21, h:  7 }
-    }
+    ]
   },
+
   conv: {
     titulo: 'Panel de Conversaciones',
     imagen: 'img/crm-conversaciones.png',
+    imgW: 1920,
     preguntas: [
       {
-        q: '¿Dónde encuentras el formulario para registrar la <strong>venta de una moto</strong> (modelo, precio, RFC)?',
-        zona: 'datos_venta_ind',
-        exp: '"Datos de Venta Individual" está en el panel derecho (Contact Details). Aquí registras el modelo, cantidad facturada, RFC y método de pago para cerrar la venta.'
+        q: '¿Desde qué sección del panel derecho redirigís el lead a otra área o sucursal?',
+        crop: { x: 1208, y: 338, w: 712, h: 78 },
+        opciones: [
+          'Datos de Venta Individual',
+          'Mando de Control',
+          'Refacciones',
+          'Servicio'
+        ],
+        ans: 1,
+        exp: '"Mando de Control" te permite asignar sucursal, elegir el área (Ventas, Servicio, Refacciones) y activar o desactivar el chatbot.'
       },
       {
-        q: '¿Dónde registras los datos cuando vendes una <strong>refacción</strong> (pieza, VIN, precio)?',
-        zona: 'refacciones',
-        exp: '"Refacciones" en el panel derecho es donde ingresas el nombre de la pieza o código Honda, VIN, precio y cierras la transacción con "REFACCIÓN VENDIDA".'
+        q: '¿En qué sección llenarías el formulario para cerrar la venta de una moto?',
+        crop: { x: 1208, y: 410, w: 712, h: 56 },
+        opciones: [
+          'Mando de Control',
+          'Servicio',
+          'Refacciones',
+          'Datos de Venta Individual'
+        ],
+        ans: 3,
+        exp: '"Datos de Venta Individual" es donde registras modelo, cantidad facturada, RFC y método de pago para cerrar la venta persona física.'
       },
       {
-        q: '¿Dónde completas los datos cuando un cliente lleva su moto a <strong>servicio o taller</strong>?',
-        zona: 'servicio',
-        exp: '"Servicio" en el panel derecho es donde registras placa/VIN, fecha de recepción, link de encuesta y cierras con "Servicio Realizado".'
+        q: '¿Esta sección del panel derecho se usa cuando el cliente...?',
+        crop: { x: 1208, y: 508, w: 712, h: 56 },
+        opciones: [
+          'Compra una moto nueva en la agencia',
+          'Trae su moto al taller para mantenimiento o reparación',
+          'Solicita una pieza o refacción Honda',
+          'Necesita ser redirigido a otra sucursal'
+        ],
+        ans: 1,
+        exp: '"Servicio" es donde registras placa/VIN, fecha de recepción, link de encuesta y cierras la orden con "Servicio Realizado".'
       },
       {
-        q: '¿Dónde redirigís el lead a <strong>otra área o sucursal</strong> y controlas el chatbot?',
-        zona: 'mando_control',
-        exp: '"Mando de Control" está en la parte superior del panel derecho. Desde ahí asignas sucursal, eliges el área (Ventas, Servicio, Refacciones) y activas o desactivas el chatbot.'
+        q: '¿Qué tipo de transacción registras desde esta sección?',
+        crop: { x: 1208, y: 558, w: 712, h: 56 },
+        opciones: [
+          'La venta de una moto nueva (modelo, precio, RFC)',
+          'La recepción de la moto en taller para servicio',
+          'La venta de piezas o accesorios Honda (pieza, VIN, precio)',
+          'El redireccionamiento del lead a otra área'
+        ],
+        ans: 2,
+        exp: '"Refacciones" es donde ingresas el nombre de la pieza o código Honda, VIN, precio y cierras la transacción con "REFACCIÓN VENDIDA".'
       }
-    ],
-    zonas: {
-      datos_venta_ind: { x: 79, y: 50, w: 21, h:  5 },
-      refacciones:     { x: 79, y: 66, w: 21, h:  4 },
-      servicio:        { x: 79, y: 61, w: 21, h:  4 },
-      mando_control:   { x: 79, y: 39, w: 21, h: 10 }
-    }
+    ]
   }
 };
 
@@ -426,25 +488,29 @@ function startEjercicio(id) {
   renderEjPregunta(id);
 }
 
+// ── Crop-MCQ engine: renders a zoomed image section + 4 text options ──
 function renderEjPregunta(id) {
-  const ej = EJERCICIOS[id];
-  const s  = ejState[id];
+  const ej   = EJERCICIOS[id];
+  const s    = ejState[id];
   const body = document.getElementById('ej-active-body');
 
-  if (s.current >= ej.preguntas.length) {
-    renderEjResultado(id);
-    return;
-  }
+  if (s.current >= ej.preguntas.length) { renderEjResultado(id); return; }
 
   const p   = ej.preguntas[s.current];
   const num = s.current + 1;
   const tot = ej.preguntas.length;
   const pct = Math.round(((num - 1) / tot) * 100);
+  const c   = p.crop;
 
-  const zonasHTML = Object.entries(ej.zonas).map(([k, z]) =>
-    `<div class="ej-zone" id="ejz-${id}-${k}"
-          style="left:${z.x}%;top:${z.y}%;width:${z.w}%;height:${z.h}%"
-          onclick="checkZona('${id}','${k}')"></div>`
+  // Responsive crop via CSS:
+  // padding-top trick keeps aspect ratio; image is shifted so only the crop region shows.
+  const padPct   = (c.h / c.w * 100).toFixed(2);
+  const imgLeft  = (-c.x / c.w * 100).toFixed(2);
+  const imgTop   = (-c.y / c.h * 100).toFixed(2);
+  const imgWidth = (ej.imgW / c.w * 100).toFixed(2);
+
+  const optsHTML = p.opciones.map((opt, i) =>
+    `<button class="quiz-option" onclick="pickEjAnswer('${id}',${i})">${opt}</button>`
   ).join('');
 
   body.innerHTML = `
@@ -454,67 +520,47 @@ function renderEjPregunta(id) {
         <div class="quiz-progress-fill" style="width:${pct}%"></div>
       </div>
       <div class="ej-question">${p.q}</div>
-      <div class="ej-hint" id="ej-hint-${id}">
-        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-        Toca la zona correcta en la imagen
+      <div style="position:relative;overflow:hidden;padding-top:${padPct}%;
+                  border-radius:10px;border:1.5px solid rgba(255,255,255,0.13);
+                  margin:18px 0 22px;background:#0d0d0d;box-shadow:0 4px 24px rgba(0,0,0,0.4)">
+        <img src="${ej.imagen}"
+             style="position:absolute;top:${imgTop}%;left:${imgLeft}%;
+                    width:${imgWidth}%;max-width:none;height:auto;display:block;pointer-events:none;"
+             alt="Sección del CRM" draggable="false">
       </div>
-      <div class="ej-img-container" id="ej-wrap-${id}" onclick="ejCoords(event,'${id}')">
-        <img src="${ej.imagen}" class="ej-img" alt="Panel CRM Comoto" draggable="false">
-        ${zonasHTML}
-        <div class="ej-crosshair" id="ej-cross-${id}"></div>
-      </div>
-      <div class="ej-coords-badge" id="ej-coords-${id}">📍 Toca la imagen para ver las coordenadas</div>
-      <div class="ej-feedback" id="ej-fb-${id}"></div>
-      <button class="quiz-next-btn" id="ej-nxt-${id}"
-              onclick="nextEjPregunta('${id}')">
+      <div class="quiz-options">${optsHTML}</div>
+      <div class="quiz-feedback" id="ej-fb-${id}"></div>
+      <button class="quiz-next-btn" id="ej-nxt-${id}" onclick="nextEjPregunta('${id}')">
         ${num < tot ? 'Siguiente →' : 'Ver mis resultados'}
       </button>
     </div>
   `;
-
   s.answered = false;
 }
 
-function ejCoords(e, id) {
-  const wrap = document.getElementById('ej-wrap-' + id);
-  const rect  = wrap.getBoundingClientRect();
-  const x = ((e.clientX - rect.left) / rect.width  * 100).toFixed(1);
-  const y = ((e.clientY - rect.top)  / rect.height * 100).toFixed(1);
-  const badge = document.getElementById('ej-coords-' + id);
-  if (badge) badge.textContent = '📍 x: ' + x + '%  y: ' + y + '%';
-  const cross = document.getElementById('ej-cross-' + id);
-  if (cross) { cross.style.left = x + '%'; cross.style.top = y + '%'; cross.style.display = 'block'; }
-}
-
-function checkZona(id, zona) {
+function pickEjAnswer(id, index) {
   const s = ejState[id];
   if (s.answered) return;
   s.answered = true;
 
-  const ej   = EJERCICIOS[id];
-  const p    = ej.preguntas[s.current];
-  const fb   = document.getElementById(`ej-fb-${id}`);
-  const nxt  = document.getElementById(`ej-nxt-${id}`);
-  const hint = document.getElementById(`ej-hint-${id}`);
+  const p       = EJERCICIOS[id].preguntas[s.current];
+  const options = document.querySelectorAll('#ej-active-body .quiz-option');
+  const fb      = document.getElementById(`ej-fb-${id}`);
+  const nxt     = document.getElementById(`ej-nxt-${id}`);
 
-  document.querySelectorAll(`[id^="ejz-${id}-"]`).forEach(z => {
-    z.style.pointerEvents = 'none';
-    z.style.cursor = 'default';
-  });
-  if (hint) hint.style.display = 'none';
+  options.forEach(o => (o.disabled = true));
 
-  if (zona === p.zona) {
-    document.getElementById(`ejz-${id}-${zona}`).classList.add('correct');
-    fb.className = 'ej-feedback fb-correct show';
+  if (index === p.ans) {
+    options[index].classList.add('correct');
+    fb.className = 'quiz-feedback fb-correct show';
     fb.innerHTML = `✅ <strong>¡Correcto!</strong> ${p.exp}`;
     s.score++;
   } else {
-    document.getElementById(`ejz-${id}-${zona}`).classList.add('incorrect');
-    document.getElementById(`ejz-${id}-${p.zona}`).classList.add('reveal');
-    fb.className = 'ej-feedback fb-incorrect show';
+    options[index].classList.add('incorrect');
+    options[p.ans].classList.add('correct');
+    fb.className = 'quiz-feedback fb-incorrect show';
     fb.innerHTML = `❌ <strong>No exactamente.</strong> ${p.exp}`;
   }
-
   nxt.classList.add('show');
 }
 
