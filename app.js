@@ -483,7 +483,7 @@ const EJERCICIOS = {
     imgW: 361,
     preguntas: [
       {
-        q: '¿En qué sección del panel derecho redirigís el lead a otra área o sucursal?',
+        q: '¿En qué sección del panel derecho rediriges el lead a otra área o sucursal?',
         crop: { x: 0, y: 0, w: 361, h: 320 },
         opciones: [
           'Datos de Venta Individual',
